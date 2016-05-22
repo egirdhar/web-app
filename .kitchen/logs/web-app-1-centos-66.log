@@ -1,0 +1,1284 @@
+F, [2016-05-20T09:42:28.536166 #24765] FATAL -- web-app-1-centos-66: The `berkshelf' gem is missing and must be installed or cannot be properly activated. Run `gem install berkshelf` or add the following to your Gemfile if you are using Bundler: `gem 'berkshelf'`.
+I, [2016-05-20T09:44:12.374148 #25255]  INFO -- web-app-1-centos-66: -----> Creating <web-app-1-centos-66>...
+I, [2016-05-20T09:44:12.409213 #25255]  INFO -- web-app-1-centos-66: Sending build context to Docker daemon  2.56 kB
+I, [2016-05-20T09:44:12.409347 #25255]  INFO -- web-app-1-centos-66: Sending build context to Docker daemon 
+I, [2016-05-20T09:44:12.454129 #25255]  INFO -- web-app-1-centos-66: Step 0 : FROM centos:centos6
+I, [2016-05-20T09:44:12.600309 #25255]  INFO -- web-app-1-centos-66:  ---> 6e93f19d1d37
+I, [2016-05-20T09:44:12.600444 #25255]  INFO -- web-app-1-centos-66: Step 1 : RUN yum clean all
+I, [2016-05-20T09:44:15.418233 #25255]  INFO -- web-app-1-centos-66:  ---> Running in 8e381a02563f
+I, [2016-05-20T09:44:20.798111 #25255]  INFO -- web-app-1-centos-66: Loaded plugins: fastestmirror
+I, [2016-05-20T09:44:20.871965 #25255]  INFO -- web-app-1-centos-66: Cleaning repos: base extras updates
+I, [2016-05-20T09:44:20.872038 #25255]  INFO -- web-app-1-centos-66: Cleaning up Everything
+I, [2016-05-20T09:44:24.760330 #25255]  INFO -- web-app-1-centos-66:  ---> 65558ce850f0
+I, [2016-05-20T09:44:25.663585 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container 8e381a02563f
+I, [2016-05-20T09:44:25.663747 #25255]  INFO -- web-app-1-centos-66: Step 2 : RUN yum install -y sudo openssh-server openssh-clients which curl
+I, [2016-05-20T09:44:25.920197 #25255]  INFO -- web-app-1-centos-66:  ---> Running in 50605777e5f1
+I, [2016-05-20T09:44:26.315665 #25255]  INFO -- web-app-1-centos-66: Loaded plugins: fastestmirror
+I, [2016-05-20T09:44:26.383471 #25255]  INFO -- web-app-1-centos-66: Setting up Install Process
+I, [2016-05-20T09:44:26.383876 #25255]  INFO -- web-app-1-centos-66: Determining fastest mirrors
+I, [2016-05-20T09:44:28.254345 #25255]  INFO -- web-app-1-centos-66:  * base: repos.dfw.quadranet.com
+I, [2016-05-20T09:44:28.254485 #25255]  INFO -- web-app-1-centos-66:  * extras: mirrors.adams.net
+I, [2016-05-20T09:44:28.254534 #25255]  INFO -- web-app-1-centos-66:  * updates: repos.dfw.quadranet.com
+I, [2016-05-20T09:45:31.162014 #25255]  INFO -- web-app-1-centos-66: Package which-2.19-6.el6.x86_64 already installed and latest version
+I, [2016-05-20T09:45:31.163139 #25255]  INFO -- web-app-1-centos-66: Package curl-7.19.7-46.el6.x86_64 already installed and latest version
+I, [2016-05-20T09:45:31.163232 #25255]  INFO -- web-app-1-centos-66: Resolving Dependencies
+I, [2016-05-20T09:45:31.164074 #25255]  INFO -- web-app-1-centos-66: --> Running transaction check
+I, [2016-05-20T09:45:31.164515 #25255]  INFO -- web-app-1-centos-66: ---> Package openssh-clients.x86_64 0:5.3p1-114.el6_7 will be installed
+I, [2016-05-20T09:45:31.261320 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: openssh = 5.3p1-114.el6_7 for package: openssh-clients-5.3p1-114.el6_7.x86_64
+I, [2016-05-20T09:45:31.264020 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: libfipscheck.so.1()(64bit) for package: openssh-clients-5.3p1-114.el6_7.x86_64
+I, [2016-05-20T09:45:31.266741 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: libedit.so.0()(64bit) for package: openssh-clients-5.3p1-114.el6_7.x86_64
+I, [2016-05-20T09:45:31.269277 #25255]  INFO -- web-app-1-centos-66: ---> Package openssh-server.x86_64 0:5.3p1-114.el6_7 will be installed
+I, [2016-05-20T09:45:31.300097 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: /sbin/service for package: openssh-server-5.3p1-114.el6_7.x86_64
+I, [2016-05-20T09:45:31.305409 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: libwrap.so.0()(64bit) for package: openssh-server-5.3p1-114.el6_7.x86_64
+I, [2016-05-20T09:45:31.307824 #25255]  INFO -- web-app-1-centos-66: ---> Package sudo.x86_64 0:1.8.6p3-20.el6_7 will be installed
+I, [2016-05-20T09:45:31.315744 #25255]  INFO -- web-app-1-centos-66: --> Running transaction check
+I, [2016-05-20T09:45:31.316184 #25255]  INFO -- web-app-1-centos-66: ---> Package fipscheck-lib.x86_64 0:1.2.0-7.el6 will be installed
+I, [2016-05-20T09:45:31.321849 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: /usr/bin/fipscheck for package: fipscheck-lib-1.2.0-7.el6.x86_64
+I, [2016-05-20T09:45:31.322931 #25255]  INFO -- web-app-1-centos-66: ---> Package initscripts.x86_64 0:9.03.49-1.el6.centos.5 will be installed
+I, [2016-05-20T09:45:31.391381 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: util-linux-ng >= 2.16 for package: initscripts-9.03.49-1.el6.centos.5.x86_64
+I, [2016-05-20T09:45:31.396200 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: udev >= 125-1 for package: initscripts-9.03.49-1.el6.centos.5.x86_64
+I, [2016-05-20T09:45:31.399295 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: sysvinit-tools >= 2.87-6 for package: initscripts-9.03.49-1.el6.centos.5.x86_64
+I, [2016-05-20T09:45:31.400590 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: /sbin/pidof for package: initscripts-9.03.49-1.el6.centos.5.x86_64
+I, [2016-05-20T09:45:31.401355 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: /sbin/ip for package: initscripts-9.03.49-1.el6.centos.5.x86_64
+I, [2016-05-20T09:45:31.402813 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: /sbin/blkid for package: initscripts-9.03.49-1.el6.centos.5.x86_64
+I, [2016-05-20T09:45:31.404671 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: /sbin/arping for package: initscripts-9.03.49-1.el6.centos.5.x86_64
+I, [2016-05-20T09:45:31.405058 #25255]  INFO -- web-app-1-centos-66: ---> Package libedit.x86_64 0:2.11-4.20080712cvs.1.el6 will be installed
+I, [2016-05-20T09:45:31.406441 #25255]  INFO -- web-app-1-centos-66: ---> Package openssh.x86_64 0:5.3p1-114.el6_7 will be installed
+I, [2016-05-20T09:45:31.414321 #25255]  INFO -- web-app-1-centos-66: ---> Package tcp_wrappers-libs.x86_64 0:7.6-57.el6 will be installed
+I, [2016-05-20T09:45:31.418439 #25255]  INFO -- web-app-1-centos-66: --> Running transaction check
+I, [2016-05-20T09:45:31.418727 #25255]  INFO -- web-app-1-centos-66: ---> Package fipscheck.x86_64 0:1.2.0-7.el6 will be installed
+I, [2016-05-20T09:45:31.420400 #25255]  INFO -- web-app-1-centos-66: ---> Package iproute.x86_64 0:2.6.32-45.el6 will be installed
+I, [2016-05-20T09:45:31.429634 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: iptables >= 1.4.5 for package: iproute-2.6.32-45.el6.x86_64
+I, [2016-05-20T09:45:31.436694 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: libxtables.so.4()(64bit) for package: iproute-2.6.32-45.el6.x86_64
+I, [2016-05-20T09:45:31.436994 #25255]  INFO -- web-app-1-centos-66: ---> Package iputils.x86_64 0:20071127-20.el6 will be installed
+I, [2016-05-20T09:45:31.443797 #25255]  INFO -- web-app-1-centos-66: ---> Package sysvinit-tools.x86_64 0:2.87-6.dsf.el6 will be installed
+I, [2016-05-20T09:45:31.444870 #25255]  INFO -- web-app-1-centos-66: ---> Package udev.x86_64 0:147-2.63.el6_7.1 will be installed
+I, [2016-05-20T09:45:31.459838 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: hwdata for package: udev-147-2.63.el6_7.1.x86_64
+I, [2016-05-20T09:45:31.461301 #25255]  INFO -- web-app-1-centos-66: ---> Package util-linux-ng.x86_64 0:2.17.2-12.18.el6 will be installed
+I, [2016-05-20T09:45:31.480560 #25255]  INFO -- web-app-1-centos-66: --> Running transaction check
+I, [2016-05-20T09:45:31.480708 #25255]  INFO -- web-app-1-centos-66: ---> Package hwdata.noarch 0:0.233-14.1.el6 will be installed
+I, [2016-05-20T09:45:31.481307 #25255]  INFO -- web-app-1-centos-66: ---> Package iptables.x86_64 0:1.4.7-16.el6 will be installed
+I, [2016-05-20T09:45:31.485301 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: policycoreutils for package: iptables-1.4.7-16.el6.x86_64
+I, [2016-05-20T09:45:31.486708 #25255]  INFO -- web-app-1-centos-66: --> Running transaction check
+I, [2016-05-20T09:45:31.486883 #25255]  INFO -- web-app-1-centos-66: ---> Package policycoreutils.x86_64 0:2.0.83-24.el6 will be installed
+I, [2016-05-20T09:45:31.502919 #25255]  INFO -- web-app-1-centos-66: --> Processing Dependency: libdbus-glib-1.so.2()(64bit) for package: policycoreutils-2.0.83-24.el6.x86_64
+I, [2016-05-20T09:45:31.505321 #25255]  INFO -- web-app-1-centos-66: --> Running transaction check
+I, [2016-05-20T09:45:31.505439 #25255]  INFO -- web-app-1-centos-66: ---> Package dbus-glib.x86_64 0:0.86-6.el6 will be installed
+I, [2016-05-20T09:45:31.735947 #25255]  INFO -- web-app-1-centos-66: --> Finished Dependency Resolution
+I, [2016-05-20T09:45:31.753936 #25255]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T09:45:31.754009 #25255]  INFO -- web-app-1-centos-66: Dependencies Resolved
+I, [2016-05-20T09:45:31.762179 #25255]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T09:45:31.762292 #25255]  INFO -- web-app-1-centos-66: ================================================================================
+I, [2016-05-20T09:45:31.762341 #25255]  INFO -- web-app-1-centos-66:  Package              Arch      Version                        Repository  Size
+I, [2016-05-20T09:45:31.762383 #25255]  INFO -- web-app-1-centos-66: ================================================================================
+I, [2016-05-20T09:45:31.762424 #25255]  INFO -- web-app-1-centos-66: Installing:
+I, [2016-05-20T09:45:31.762464 #25255]  INFO -- web-app-1-centos-66:  openssh-clients      x86_64    5.3p1-114.el6_7                updates    439 k
+I, [2016-05-20T09:45:31.762532 #25255]  INFO -- web-app-1-centos-66:  openssh-server       x86_64    5.3p1-114.el6_7                updates    324 k
+I, [2016-05-20T09:45:31.762575 #25255]  INFO -- web-app-1-centos-66:  sudo                 x86_64    1.8.6p3-20.el6_7               updates    707 k
+I, [2016-05-20T09:45:31.762615 #25255]  INFO -- web-app-1-centos-66: Installing for dependencies:
+I, [2016-05-20T09:45:31.762686 #25255]  INFO -- web-app-1-centos-66:  dbus-glib            x86_64    0.86-6.el6                     base       170 k
+I, [2016-05-20T09:45:31.762733 #25255]  INFO -- web-app-1-centos-66:  fipscheck            x86_64    1.2.0-7.el6                    base        14 k
+I, [2016-05-20T09:45:31.762775 #25255]  INFO -- web-app-1-centos-66:  fipscheck-lib        x86_64    1.2.0-7.el6                    base       8.3 k
+I, [2016-05-20T09:45:31.762815 #25255]  INFO -- web-app-1-centos-66:  hwdata               noarch    0.233-14.1.el6                 base       1.3 M
+I, [2016-05-20T09:45:31.762856 #25255]  INFO -- web-app-1-centos-66:  initscripts          x86_64    9.03.49-1.el6.centos.5         updates    945 k
+I, [2016-05-20T09:45:31.762901 #25255]  INFO -- web-app-1-centos-66:  iproute              x86_64    2.6.32-45.el6                  base       367 k
+I, [2016-05-20T09:45:31.762952 #25255]  INFO -- web-app-1-centos-66:  iptables             x86_64    1.4.7-16.el6                   base       254 k
+I, [2016-05-20T09:45:31.762994 #25255]  INFO -- web-app-1-centos-66:  iputils              x86_64    20071127-20.el6                base       120 k
+I, [2016-05-20T09:45:31.763035 #25255]  INFO -- web-app-1-centos-66:  libedit              x86_64    2.11-4.20080712cvs.1.el6       base        74 k
+I, [2016-05-20T09:45:31.763083 #25255]  INFO -- web-app-1-centos-66:  openssh              x86_64    5.3p1-114.el6_7                updates    274 k
+I, [2016-05-20T09:45:31.763275 #25255]  INFO -- web-app-1-centos-66:  policycoreutils      x86_64    2.0.83-24.el6                  base       651 k
+I, [2016-05-20T09:45:31.763327 #25255]  INFO -- web-app-1-centos-66:  sysvinit-tools       x86_64    2.87-6.dsf.el6                 base        60 k
+I, [2016-05-20T09:45:31.763368 #25255]  INFO -- web-app-1-centos-66:  tcp_wrappers-libs    x86_64    7.6-57.el6                     base        62 k
+I, [2016-05-20T09:45:31.763434 #25255]  INFO -- web-app-1-centos-66:  udev                 x86_64    147-2.63.el6_7.1               updates    355 k
+I, [2016-05-20T09:45:31.763478 #25255]  INFO -- web-app-1-centos-66:  util-linux-ng        x86_64    2.17.2-12.18.el6               base       1.6 M
+I, [2016-05-20T09:45:31.763542 #25255]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T09:45:31.763585 #25255]  INFO -- web-app-1-centos-66: Transaction Summary
+I, [2016-05-20T09:45:31.763625 #25255]  INFO -- web-app-1-centos-66: ================================================================================
+I, [2016-05-20T09:45:31.763689 #25255]  INFO -- web-app-1-centos-66: Install      18 Package(s)
+I, [2016-05-20T09:45:31.764345 #25255]  INFO -- web-app-1-centos-66: Total download size: 7.6 M
+I, [2016-05-20T09:45:31.764396 #25255]  INFO -- web-app-1-centos-66: Installed size: 29 M
+I, [2016-05-20T09:45:31.764437 #25255]  INFO -- web-app-1-centos-66: Downloading Packages:
+I, [2016-05-20T09:45:52.739021 #25255]  INFO -- web-app-1-centos-66: --------------------------------------------------------------------------------
+I, [2016-05-20T09:45:52.739161 #25255]  INFO -- web-app-1-centos-66: Total                                           369 kB/s | 7.6 MB     00:20     
+I, [2016-05-20T09:45:52.740273 #25255]  INFO -- web-app-1-centos-66: [91mwarning: rpmts_HdrFromFdno: Header V3 RSA/SHA1 Signature, key ID c105b9de: NOKEY
+I, [2016-05-20T09:45:52.740340 #25255]  INFO -- web-app-1-centos-66: [0mRetrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+I, [2016-05-20T09:45:52.767732 #25255]  INFO -- web-app-1-centos-66: [91mImporting GPG key 0xC105B9DE:
+I, [2016-05-20T09:45:52.767858 #25255]  INFO -- web-app-1-centos-66:  Userid : CentOS-6 Key (CentOS 6 Official Signing Key) <centos-6-key@centos.org>
+I, [2016-05-20T09:45:52.767905 #25255]  INFO -- web-app-1-centos-66:  Package: centos-release-6-7.el6.centos.12.3.x86_64 (@CentOS/6.7)
+I, [2016-05-20T09:45:52.767947 #25255]  INFO -- web-app-1-centos-66:  From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
+I, [2016-05-20T09:45:52.767986 #25255]  INFO -- web-app-1-centos-66: [0m
+I, [2016-05-20T09:45:52.856441 #25255]  INFO -- web-app-1-centos-66: Running rpm_check_debug
+I, [2016-05-20T09:45:52.933584 #25255]  INFO -- web-app-1-centos-66: Running Transaction Test
+I, [2016-05-20T09:45:52.995948 #25255]  INFO -- web-app-1-centos-66: Transaction Test Succeeded
+I, [2016-05-20T09:45:53.074056 #25255]  INFO -- web-app-1-centos-66: Running Transaction
+  Installing : sysvinit-tools-2.87-6.dsf.el6.x86_64                        1/18I, [2016-05-20T09:45:53.382847 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:53.382975 #25255]  INFO -- web-app-1-centos-66:   Installing : fipscheck-lib-1.2.0-7.el6.x86_64                            2/18
+I, [2016-05-20T09:45:53.907953 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:53.908088 #25255]  INFO -- web-app-1-centos-66:   Installing : fipscheck-1.2.0-7.el6.x86_64                                3/18
+I, [2016-05-20T09:45:54.006557 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:54.006749 #25255]  INFO -- web-app-1-centos-66:   Installing : dbus-glib-0.86-6.el6.x86_64                                 4/18
+I, [2016-05-20T09:45:54.504459 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:54.504615 #25255]  INFO -- web-app-1-centos-66:   Installing : hwdata-0.233-14.1.el6.noarch                                5/18
+I, [2016-05-20T09:45:54.777108 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:54.777247 #25255]  INFO -- web-app-1-centos-66:   Installing : policycoreutils-2.0.83-24.el6.x86_64                        6/18
+I, [2016-05-20T09:45:55.244180 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:55.244315 #25255]  INFO -- web-app-1-centos-66:   Installing : iptables-1.4.7-16.el6.x86_64                                7/18
+I, [2016-05-20T09:45:55.604840 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:55.604980 #25255]  INFO -- web-app-1-centos-66:   Installing : iproute-2.6.32-45.el6.x86_64                                8/18
+I, [2016-05-20T09:45:55.724090 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:55.724227 #25255]  INFO -- web-app-1-centos-66:   Installing : iputils-20071127-20.el6.x86_64                              9/18
+I, [2016-05-20T09:45:56.350822 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:56.350977 #25255]  INFO -- web-app-1-centos-66:   Installing : util-linux-ng-2.17.2-12.18.el6.x86_64                      10/18
+I, [2016-05-20T09:45:56.642310 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:56.642437 #25255]  INFO -- web-app-1-centos-66: install-info: No such file or directory for /usr/share/info/ipc.info
+  Installing : initscripts-9.03.49-1.el6.centos.5.x86_64                  11/18I, [2016-05-20T09:45:57.757201 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:57.757339 #25255]  INFO -- web-app-1-centos-66:   Installing : udev-147-2.63.el6_7.1.x86_64                               12/18
+I, [2016-05-20T09:45:58.201490 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:58.201619 #25255]  INFO -- web-app-1-centos-66:   Installing : openssh-5.3p1-114.el6_7.x86_64                             13/18
+I, [2016-05-20T09:45:58.319183 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:58.319284 #25255]  INFO -- web-app-1-centos-66:   Installing : libedit-2.11-4.20080712cvs.1.el6.x86_64                    14/18
+I, [2016-05-20T09:45:58.623113 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:58.623235 #25255]  INFO -- web-app-1-centos-66:   Installing : tcp_wrappers-libs-7.6-57.el6.x86_64                        15/18
+I, [2016-05-20T09:45:59.181966 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:59.182098 #25255]  INFO -- web-app-1-centos-66:   Installing : openssh-server-5.3p1-114.el6_7.x86_64                      16/18
+I, [2016-05-20T09:45:59.496762 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:59.496897 #25255]  INFO -- web-app-1-centos-66:   Installing : openssh-clients-5.3p1-114.el6_7.x86_64                     17/18
+I, [2016-05-20T09:45:59.829132 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:45:59.829271 #25255]  INFO -- web-app-1-centos-66:   Installing : sudo-1.8.6p3-20.el6_7.x86_64                               18/18
+I, [2016-05-20T09:46:00.068754 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.068886 #25255]  INFO -- web-app-1-centos-66:   Verifying  : tcp_wrappers-libs-7.6-57.el6.x86_64                         1/18
+I, [2016-05-20T09:46:00.090768 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.090868 #25255]  INFO -- web-app-1-centos-66:   Verifying  : iproute-2.6.32-45.el6.x86_64                                2/18
+I, [2016-05-20T09:46:00.104671 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.104749 #25255]  INFO -- web-app-1-centos-66:   Verifying  : libedit-2.11-4.20080712cvs.1.el6.x86_64                     3/18
+I, [2016-05-20T09:46:00.116595 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.116707 #25255]  INFO -- web-app-1-centos-66:   Verifying  : fipscheck-1.2.0-7.el6.x86_64                                4/18
+I, [2016-05-20T09:46:00.134811 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.134879 #25255]  INFO -- web-app-1-centos-66:   Verifying  : util-linux-ng-2.17.2-12.18.el6.x86_64                       5/18
+I, [2016-05-20T09:46:00.154010 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.154103 #25255]  INFO -- web-app-1-centos-66:   Verifying  : sysvinit-tools-2.87-6.dsf.el6.x86_64                        6/18
+I, [2016-05-20T09:46:00.176970 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.177081 #25255]  INFO -- web-app-1-centos-66:   Verifying  : sudo-1.8.6p3-20.el6_7.x86_64                                7/18
+I, [2016-05-20T09:46:00.197452 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.197521 #25255]  INFO -- web-app-1-centos-66:   Verifying  : iputils-20071127-20.el6.x86_64                              8/18
+I, [2016-05-20T09:46:00.217686 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.217755 #25255]  INFO -- web-app-1-centos-66:   Verifying  : hwdata-0.233-14.1.el6.noarch                                9/18
+I, [2016-05-20T09:46:00.241547 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.241631 #25255]  INFO -- web-app-1-centos-66:   Verifying  : openssh-server-5.3p1-114.el6_7.x86_64                      10/18
+I, [2016-05-20T09:46:00.262127 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.262191 #25255]  INFO -- web-app-1-centos-66:   Verifying  : policycoreutils-2.0.83-24.el6.x86_64                       11/18
+I, [2016-05-20T09:46:00.282889 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.282955 #25255]  INFO -- web-app-1-centos-66:   Verifying  : iptables-1.4.7-16.el6.x86_64                               12/18
+I, [2016-05-20T09:46:00.296323 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.296395 #25255]  INFO -- web-app-1-centos-66:   Verifying  : openssh-clients-5.3p1-114.el6_7.x86_64                     13/18
+I, [2016-05-20T09:46:00.310722 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.310787 #25255]  INFO -- web-app-1-centos-66:   Verifying  : udev-147-2.63.el6_7.1.x86_64                               14/18
+I, [2016-05-20T09:46:00.332049 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.332115 #25255]  INFO -- web-app-1-centos-66:   Verifying  : initscripts-9.03.49-1.el6.centos.5.x86_64                  15/18
+I, [2016-05-20T09:46:00.466802 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.466931 #25255]  INFO -- web-app-1-centos-66:   Verifying  : dbus-glib-0.86-6.el6.x86_64                                16/18
+I, [2016-05-20T09:46:00.493208 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.493276 #25255]  INFO -- web-app-1-centos-66:   Verifying  : openssh-5.3p1-114.el6_7.x86_64                             17/18
+I, [2016-05-20T09:46:00.506577 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.506663 #25255]  INFO -- web-app-1-centos-66:   Verifying  : fipscheck-lib-1.2.0-7.el6.x86_64                           18/18
+I, [2016-05-20T09:46:00.574181 #25255]  INFO -- web-app-1-centos-66:  
+I, [2016-05-20T09:46:00.574314 #25255]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T09:46:00.574361 #25255]  INFO -- web-app-1-centos-66: Installed:
+I, [2016-05-20T09:46:00.574404 #25255]  INFO -- web-app-1-centos-66:   openssh-clients.x86_64 0:5.3p1-114.el6_7                                      
+I, [2016-05-20T09:46:00.574446 #25255]  INFO -- web-app-1-centos-66:   openssh-server.x86_64 0:5.3p1-114.el6_7                                       
+I, [2016-05-20T09:46:00.574497 #25255]  INFO -- web-app-1-centos-66:   sudo.x86_64 0:1.8.6p3-20.el6_7                                                
+I, [2016-05-20T09:46:00.574539 #25255]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T09:46:00.574577 #25255]  INFO -- web-app-1-centos-66: Dependency Installed:
+I, [2016-05-20T09:46:00.574631 #25255]  INFO -- web-app-1-centos-66:   dbus-glib.x86_64 0:0.86-6.el6                                                 
+I, [2016-05-20T09:46:00.574707 #25255]  INFO -- web-app-1-centos-66:   fipscheck.x86_64 0:1.2.0-7.el6                                                
+I, [2016-05-20T09:46:00.574752 #25255]  INFO -- web-app-1-centos-66:   fipscheck-lib.x86_64 0:1.2.0-7.el6                                            
+I, [2016-05-20T09:46:00.574794 #25255]  INFO -- web-app-1-centos-66:   hwdata.noarch 0:0.233-14.1.el6                                                
+I, [2016-05-20T09:46:00.574835 #25255]  INFO -- web-app-1-centos-66:   initscripts.x86_64 0:9.03.49-1.el6.centos.5                                   
+I, [2016-05-20T09:46:00.574877 #25255]  INFO -- web-app-1-centos-66:   iproute.x86_64 0:2.6.32-45.el6                                                
+I, [2016-05-20T09:46:00.574926 #25255]  INFO -- web-app-1-centos-66:   iptables.x86_64 0:1.4.7-16.el6                                                
+I, [2016-05-20T09:46:00.574997 #25255]  INFO -- web-app-1-centos-66:   iputils.x86_64 0:20071127-20.el6                                              
+I, [2016-05-20T09:46:00.575041 #25255]  INFO -- web-app-1-centos-66:   libedit.x86_64 0:2.11-4.20080712cvs.1.el6                                     
+I, [2016-05-20T09:46:00.575765 #25255]  INFO -- web-app-1-centos-66:   openssh.x86_64 0:5.3p1-114.el6_7                                              
+I, [2016-05-20T09:46:00.575885 #25255]  INFO -- web-app-1-centos-66:   policycoreutils.x86_64 0:2.0.83-24.el6                                        
+I, [2016-05-20T09:46:00.575958 #25255]  INFO -- web-app-1-centos-66:   sysvinit-tools.x86_64 0:2.87-6.dsf.el6                                        
+I, [2016-05-20T09:46:00.576005 #25255]  INFO -- web-app-1-centos-66:   tcp_wrappers-libs.x86_64 0:7.6-57.el6                                         
+I, [2016-05-20T09:46:00.576049 #25255]  INFO -- web-app-1-centos-66:   udev.x86_64 0:147-2.63.el6_7.1                                                
+I, [2016-05-20T09:46:00.576102 #25255]  INFO -- web-app-1-centos-66:   util-linux-ng.x86_64 0:2.17.2-12.18.el6                                       
+I, [2016-05-20T09:46:00.576143 #25255]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T09:46:00.576182 #25255]  INFO -- web-app-1-centos-66: Complete!
+I, [2016-05-20T09:46:05.746083 #25255]  INFO -- web-app-1-centos-66:  ---> 062964ef071a
+I, [2016-05-20T09:46:06.680238 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container 50605777e5f1
+I, [2016-05-20T09:46:06.680352 #25255]  INFO -- web-app-1-centos-66: Step 3 : RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+I, [2016-05-20T09:46:07.479135 #25255]  INFO -- web-app-1-centos-66:  ---> Running in d0e0d03042ad
+I, [2016-05-20T09:46:07.672140 #25255]  INFO -- web-app-1-centos-66: Generating public/private rsa key pair.
+I, [2016-05-20T09:46:07.672252 #25255]  INFO -- web-app-1-centos-66: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
+I, [2016-05-20T09:46:07.672301 #25255]  INFO -- web-app-1-centos-66: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
+I, [2016-05-20T09:46:07.672342 #25255]  INFO -- web-app-1-centos-66: The key fingerprint is:
+I, [2016-05-20T09:46:07.672395 #25255]  INFO -- web-app-1-centos-66: 39:57:9e:c3:99:c1:d9:4e:48:f2:06:b0:88:b0:ff:46 root@311853ee264c
+I, [2016-05-20T09:46:07.672437 #25255]  INFO -- web-app-1-centos-66: The key's randomart image is:
+I, [2016-05-20T09:46:07.672476 #25255]  INFO -- web-app-1-centos-66: +--[ RSA 2048]----+
+I, [2016-05-20T09:46:07.672515 #25255]  INFO -- web-app-1-centos-66: |  .     ..o .    |
+I, [2016-05-20T09:46:07.672579 #25255]  INFO -- web-app-1-centos-66: |   o . . . * +   |
+I, [2016-05-20T09:46:07.672620 #25255]  INFO -- web-app-1-centos-66: |  . . . .   O o  |
+I, [2016-05-20T09:46:07.672697 #25255]  INFO -- web-app-1-centos-66: |   .     . = B   |
+I, [2016-05-20T09:46:07.672741 #25255]  INFO -- web-app-1-centos-66: |    . E S . B .  |
+I, [2016-05-20T09:46:07.672780 #25255]  INFO -- web-app-1-centos-66: |     o   o   .   |
+I, [2016-05-20T09:46:07.672820 #25255]  INFO -- web-app-1-centos-66: |      o          |
+I, [2016-05-20T09:46:07.672865 #25255]  INFO -- web-app-1-centos-66: |     .           |
+I, [2016-05-20T09:46:07.672906 #25255]  INFO -- web-app-1-centos-66: |                 |
+I, [2016-05-20T09:46:07.672944 #25255]  INFO -- web-app-1-centos-66: +-----------------+
+I, [2016-05-20T09:46:09.506250 #25255]  INFO -- web-app-1-centos-66:  ---> 583e6fa26ea8
+I, [2016-05-20T09:46:10.413961 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container d0e0d03042ad
+I, [2016-05-20T09:46:10.414092 #25255]  INFO -- web-app-1-centos-66: Step 4 : RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
+I, [2016-05-20T09:46:10.650134 #25255]  INFO -- web-app-1-centos-66:  ---> Running in 027c0a1ca617
+I, [2016-05-20T09:46:11.036166 #25255]  INFO -- web-app-1-centos-66: Generating public/private dsa key pair.
+I, [2016-05-20T09:46:11.036314 #25255]  INFO -- web-app-1-centos-66: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
+I, [2016-05-20T09:46:11.036362 #25255]  INFO -- web-app-1-centos-66: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
+I, [2016-05-20T09:46:11.036403 #25255]  INFO -- web-app-1-centos-66: The key fingerprint is:
+I, [2016-05-20T09:46:11.036474 #25255]  INFO -- web-app-1-centos-66: 4b:f7:37:4d:ab:f5:3d:76:e3:eb:a2:d0:45:74:bf:ca root@311853ee264c
+I, [2016-05-20T09:46:11.036539 #25255]  INFO -- web-app-1-centos-66: The key's randomart image is:
+I, [2016-05-20T09:46:11.036580 #25255]  INFO -- web-app-1-centos-66: +--[ DSA 1024]----+
+I, [2016-05-20T09:46:11.036620 #25255]  INFO -- web-app-1-centos-66: |             . . |
+I, [2016-05-20T09:46:11.036688 #25255]  INFO -- web-app-1-centos-66: |            . . .|
+I, [2016-05-20T09:46:11.036744 #25255]  INFO -- web-app-1-centos-66: |             .  .|
+I, [2016-05-20T09:46:11.036785 #25255]  INFO -- web-app-1-centos-66: |            .   .|
+I, [2016-05-20T09:46:11.036824 #25255]  INFO -- web-app-1-centos-66: |        S .  . ..|
+I, [2016-05-20T09:46:11.036863 #25255]  INFO -- web-app-1-centos-66: |       . o..o .o.|
+I, [2016-05-20T09:46:11.036901 #25255]  INFO -- web-app-1-centos-66: |        .. ..Eoo.|
+I, [2016-05-20T09:46:11.036968 #25255]  INFO -- web-app-1-centos-66: |          .  oo=+|
+I, [2016-05-20T09:46:11.037010 #25255]  INFO -- web-app-1-centos-66: |           ...=+B|
+I, [2016-05-20T09:46:11.037049 #25255]  INFO -- web-app-1-centos-66: +-----------------+
+I, [2016-05-20T09:46:12.882069 #25255]  INFO -- web-app-1-centos-66:  ---> 73bdb83aed40
+I, [2016-05-20T09:46:13.796363 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container 027c0a1ca617
+I, [2016-05-20T09:46:13.796504 #25255]  INFO -- web-app-1-centos-66: Step 5 : RUN if ! getent passwd kitchen; then useradd -d /home/kitchen -m -s /bin/bash kitchen; fi
+I, [2016-05-20T09:46:14.105223 #25255]  INFO -- web-app-1-centos-66:  ---> Running in f69ad3b0cc72
+I, [2016-05-20T09:46:16.259411 #25255]  INFO -- web-app-1-centos-66:  ---> 6311752ba3f3
+I, [2016-05-20T09:46:17.199941 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container f69ad3b0cc72
+I, [2016-05-20T09:46:17.200062 #25255]  INFO -- web-app-1-centos-66: Step 6 : RUN echo kitchen:kitchen | chpasswd
+I, [2016-05-20T09:46:17.449211 #25255]  INFO -- web-app-1-centos-66:  ---> Running in 15bb6a57e685
+I, [2016-05-20T09:46:19.436234 #25255]  INFO -- web-app-1-centos-66:  ---> daa776b4e061
+I, [2016-05-20T09:46:20.366326 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container 15bb6a57e685
+I, [2016-05-20T09:46:20.366442 #25255]  INFO -- web-app-1-centos-66: Step 7 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+I, [2016-05-20T09:46:20.655108 #25255]  INFO -- web-app-1-centos-66:  ---> Running in e3432ba5e8c8
+I, [2016-05-20T09:46:22.495133 #25255]  INFO -- web-app-1-centos-66:  ---> a99ae52237cd
+I, [2016-05-20T09:46:23.382835 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container e3432ba5e8c8
+I, [2016-05-20T09:46:23.382952 #25255]  INFO -- web-app-1-centos-66: Step 8 : RUN mkdir -p /etc/sudoers.d
+I, [2016-05-20T09:46:23.639060 #25255]  INFO -- web-app-1-centos-66:  ---> Running in 5e749cd54d47
+I, [2016-05-20T09:46:25.401128 #25255]  INFO -- web-app-1-centos-66:  ---> 4c066b418b9d
+I, [2016-05-20T09:46:26.318847 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container 5e749cd54d47
+I, [2016-05-20T09:46:26.318979 #25255]  INFO -- web-app-1-centos-66: Step 9 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/kitchen
+I, [2016-05-20T09:46:26.602247 #25255]  INFO -- web-app-1-centos-66:  ---> Running in c47b69251702
+I, [2016-05-20T09:46:28.584209 #25255]  INFO -- web-app-1-centos-66:  ---> 0f6e46b502b1
+I, [2016-05-20T09:46:29.533027 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container c47b69251702
+I, [2016-05-20T09:46:29.533151 #25255]  INFO -- web-app-1-centos-66: Step 10 : RUN chmod 0440 /etc/sudoers.d/kitchen
+I, [2016-05-20T09:46:29.787240 #25255]  INFO -- web-app-1-centos-66:  ---> Running in 475c6a9fb73b
+I, [2016-05-20T09:46:31.771624 #25255]  INFO -- web-app-1-centos-66:  ---> 61b1ad6dcf51
+I, [2016-05-20T09:46:32.678649 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container 475c6a9fb73b
+I, [2016-05-20T09:46:32.678801 #25255]  INFO -- web-app-1-centos-66: Step 11 : RUN echo 'root:ibm4ever' | chpasswd
+I, [2016-05-20T09:46:32.954132 #25255]  INFO -- web-app-1-centos-66:  ---> Running in f8e8176680a5
+I, [2016-05-20T09:46:34.925151 #25255]  INFO -- web-app-1-centos-66:  ---> ff8273db35c8
+I, [2016-05-20T09:46:35.844214 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container f8e8176680a5
+I, [2016-05-20T09:46:35.844354 #25255]  INFO -- web-app-1-centos-66: Step 12 : RUN mkdir /root/.ssh
+I, [2016-05-20T09:46:36.140130 #25255]  INFO -- web-app-1-centos-66:  ---> Running in 8d529bcbc1ec
+I, [2016-05-20T09:46:38.020216 #25255]  INFO -- web-app-1-centos-66:  ---> 724e256fec79
+I, [2016-05-20T09:46:38.913739 #25255]  INFO -- web-app-1-centos-66: Removing intermediate container 8d529bcbc1ec
+I, [2016-05-20T09:46:38.913893 #25255]  INFO -- web-app-1-centos-66: Successfully built 724e256fec79
+I, [2016-05-20T09:46:39.234985 #25255]  INFO -- web-app-1-centos-66: 42092ef2b4760c31b6a9325ac0f18f883b78d50347ae255488131e3863b57233
+I, [2016-05-20T09:46:39.542705 #25255]  INFO -- web-app-1-centos-66: Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+I, [2016-05-20T09:46:39.582541 #25255]  INFO -- web-app-1-centos-66: 0.0.0.0:32768
+I, [2016-05-20T09:46:39.603661 #25255]  INFO -- web-app-1-centos-66: Finished creating <web-app-1-centos-66> (2m27.23s).
+I, [2016-05-20T10:47:28.061851 #28044]  INFO -- web-app-1-centos-66: -----> Converging <web-app-1-centos-66>...
+I, [2016-05-20T10:47:28.062584 #28044]  INFO -- web-app-1-centos-66: Preparing files for transfer
+I, [2016-05-20T10:47:28.062949 #28044]  INFO -- web-app-1-centos-66: Resolving cookbook dependencies with Berkshelf 4.2.0...
+E, [2016-05-20T10:47:28.066874 #28044] ERROR -- web-app-1-centos-66: Converge failed on instance <web-app-1-centos-66>.
+E, [2016-05-20T10:47:28.066983 #28044] ERROR -- web-app-1-centos-66: ------Exception-------
+E, [2016-05-20T10:47:28.067031 #28044] ERROR -- web-app-1-centos-66: Class: Berkshelf::BerksfileReadError
+E, [2016-05-20T10:47:28.067066 #28044] ERROR -- web-app-1-centos-66: Message: An error occurred while reading the Berksfile:
+
+  Could not open or read: '/media/ibm/project/chef-repo/cookbooks/web-app/metadata.rb'
+E, [2016-05-20T10:47:28.067101 #28044] ERROR -- web-app-1-centos-66: ------Backtrace-------
+E, [2016-05-20T10:47:28.067135 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/ridley-4.4.1/lib/ridley/mixin/from_file.rb:63:in `ensure_presence!'
+E, [2016-05-20T10:47:28.067170 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/ridley-4.4.1/lib/ridley/mixin/from_file.rb:28:in `from_file'
+E, [2016-05-20T10:47:28.067205 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/ridley-4.4.1/lib/ridley/mixin/from_file.rb:5:in `from_file'
+E, [2016-05-20T10:47:28.067244 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/berkshelf-4.2.0/lib/berkshelf/berksfile.rb:176:in `metadata'
+E, [2016-05-20T10:47:28.067303 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/cleanroom-1.0.0/lib/cleanroom.rb:130:in `public_send'
+E, [2016-05-20T10:47:28.067341 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/cleanroom-1.0.0/lib/cleanroom.rb:130:in `block (3 levels) in cleanroom'
+E, [2016-05-20T10:47:28.067376 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/Berksfile:3:in `evaluate'
+E, [2016-05-20T10:47:28.067410 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/cleanroom-1.0.0/lib/cleanroom.rb:70:in `instance_eval'
+E, [2016-05-20T10:47:28.067444 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/cleanroom-1.0.0/lib/cleanroom.rb:70:in `evaluate'
+E, [2016-05-20T10:47:28.067497 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/cleanroom-1.0.0/lib/cleanroom.rb:56:in `evaluate_file'
+E, [2016-05-20T10:47:28.067538 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/cleanroom-1.0.0/lib/cleanroom.rb:173:in `evaluate_file'
+E, [2016-05-20T10:47:28.067579 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/berkshelf-4.2.0/lib/berkshelf/berksfile.rb:23:in `from_file'
+E, [2016-05-20T10:47:28.067615 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef/berkshelf.rb:55:in `block in resolve'
+E, [2016-05-20T10:47:28.067703 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/thor-0.19.1/lib/thor/shell/basic.rb:20:in `mute'
+E, [2016-05-20T10:47:28.067751 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef/berkshelf.rb:51:in `resolve'
+E, [2016-05-20T10:47:28.067787 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:394:in `block in resolve_with_berkshelf'
+E, [2016-05-20T10:47:28.067822 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:393:in `synchronize'
+E, [2016-05-20T10:47:28.067856 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:393:in `resolve_with_berkshelf'
+E, [2016-05-20T10:47:28.067889 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:259:in `prepare_cookbooks'
+E, [2016-05-20T10:47:28.067923 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_base.rb:120:in `create_sandbox'
+E, [2016-05-20T10:47:28.067957 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/provisioner/chef_solo.rb:33:in `create_sandbox'
+E, [2016-05-20T10:47:28.067991 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:40:in `converge'
+E, [2016-05-20T10:47:28.068025 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2016-05-20T10:47:28.068059 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2016-05-20T10:47:28.068093 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2016-05-20T10:47:28.068127 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2016-05-20T10:47:28.068161 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2016-05-20T10:47:28.068195 #28044] ERROR -- web-app-1-centos-66: /usr/local/rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-05-20T10:47:28.068249 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2016-05-20T10:47:28.068290 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2016-05-20T10:47:28.068353 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+E, [2016-05-20T10:47:28.068389 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2016-05-20T10:47:28.068423 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2016-05-20T10:47:28.068457 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2016-05-20T10:47:28.068491 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:119:in `converge'
+E, [2016-05-20T10:47:28.068526 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+E, [2016-05-20T10:47:28.068560 #28044] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2016-05-20T10:47:28.068595 #28044] ERROR -- web-app-1-centos-66: ----------------------
+I, [2016-05-20T10:48:45.408729 #28084]  INFO -- web-app-1-centos-66: -----> Converging <web-app-1-centos-66>...
+I, [2016-05-20T10:48:45.409573 #28084]  INFO -- web-app-1-centos-66: Preparing files for transfer
+I, [2016-05-20T10:48:45.410177 #28084]  INFO -- web-app-1-centos-66: Resolving cookbook dependencies with Berkshelf 4.2.0...
+I, [2016-05-20T10:48:45.427771 #28084]  INFO -- web-app-1-centos-66: Removing non-cookbook files before transfer
+I, [2016-05-20T10:48:45.669194 #28084]  INFO -- web-app-1-centos-66: -----> Installing Chef Omnibus (true)
+I, [2016-05-20T10:48:45.669335 #28084]  INFO -- web-app-1-centos-66: downloading https://www.getchef.com/chef/install.sh
+I, [2016-05-20T10:48:45.669386 #28084]  INFO -- web-app-1-centos-66:   to file /tmp/install.sh
+I, [2016-05-20T10:48:45.675926 #28084]  INFO -- web-app-1-centos-66: trying curl...
+I, [2016-05-20T10:48:46.066703 #28084]  INFO -- web-app-1-centos-66:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+I, [2016-05-20T10:48:46.066890 #28084]  INFO -- web-app-1-centos-66:                           Dload  Upload   Total   Spent    Left  Speed
+I, [2016-05-20T10:48:46.066943 #28084]  INFO -- web-app-1-centos-66:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+I, [2016-05-20T10:48:46.110412 #28084]  INFO -- web-app-1-centos-66: 100 19602  100 19602    0     0  47879      0 --:--:-- --:--:-- --:--:--  466k
+I, [2016-05-20T10:48:46.239555 #28084]  INFO -- web-app-1-centos-66: el 6 x86_64
+I, [2016-05-20T10:48:46.239704 #28084]  INFO -- web-app-1-centos-66: Getting information for chef stable  for el...
+I, [2016-05-20T10:48:46.239756 #28084]  INFO -- web-app-1-centos-66: downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=&p=el&pv=6&m=x86_64
+I, [2016-05-20T10:48:46.239800 #28084]  INFO -- web-app-1-centos-66:   to file /tmp/install.sh.15/metadata.txt
+I, [2016-05-20T10:48:46.240992 #28084]  INFO -- web-app-1-centos-66: trying curl...
+I, [2016-05-20T10:48:46.739097 #28084]  INFO -- web-app-1-centos-66: sha1	faec4e0bc2cc236170b400426cd3b51b5657fe90
+I, [2016-05-20T10:48:46.739249 #28084]  INFO -- web-app-1-centos-66: sha256	445b64e38827d8c787267bda57d2cd6be797b6f6f70eb34ec846eceee8f6fae9
+I, [2016-05-20T10:48:46.739300 #28084]  INFO -- web-app-1-centos-66: url	https://packages.chef.io/stable/el/6/chef-12.10.24-1.el6.x86_64.rpm
+I, [2016-05-20T10:48:46.739342 #28084]  INFO -- web-app-1-centos-66: version	12.10.24
+I, [2016-05-20T10:48:46.739611 #28084]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:48:46.741588 #28084]  INFO -- web-app-1-centos-66: downloaded metadata file looks valid...
+I, [2016-05-20T10:48:46.754592 #28084]  INFO -- web-app-1-centos-66: downloading https://packages.chef.io/stable/el/6/chef-12.10.24-1.el6.x86_64.rpm
+I, [2016-05-20T10:48:46.754739 #28084]  INFO -- web-app-1-centos-66:   to file /tmp/install.sh.15/chef-12.10.24-1.el6.x86_64.rpm
+I, [2016-05-20T10:48:46.755439 #28084]  INFO -- web-app-1-centos-66: trying curl...
+I, [2016-05-20T10:48:48.093299 #28084]  INFO -- web-app-1-centos-66: Comparing checksum with sha256sum...
+I, [2016-05-20T10:48:48.685767 #28084]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:48:48.685894 #28084]  INFO -- web-app-1-centos-66: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-05-20T10:48:48.685942 #28084]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:48:48.685982 #28084]  INFO -- web-app-1-centos-66: You are installing an omnibus package without a version pin.  If you are installing
+I, [2016-05-20T10:48:48.686022 #28084]  INFO -- web-app-1-centos-66: on production servers via an automated process this is DANGEROUS and you will
+I, [2016-05-20T10:48:48.686063 #28084]  INFO -- web-app-1-centos-66: be upgraded without warning on new releases, even to new major releases.
+I, [2016-05-20T10:48:48.686103 #28084]  INFO -- web-app-1-centos-66: Letting the version float is only appropriate in desktop, test, development or
+I, [2016-05-20T10:48:48.686142 #28084]  INFO -- web-app-1-centos-66: CI/CD environments.
+I, [2016-05-20T10:48:48.686181 #28084]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:48:48.686219 #28084]  INFO -- web-app-1-centos-66: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-05-20T10:48:48.686258 #28084]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:48:48.686296 #28084]  INFO -- web-app-1-centos-66: Installing chef 
+I, [2016-05-20T10:48:48.686335 #28084]  INFO -- web-app-1-centos-66: installing with rpm...
+I, [2016-05-20T10:48:48.759350 #28084]  INFO -- web-app-1-centos-66: warning: /tmp/install.sh.15/chef-12.10.24-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+Preparing...                                                            (100%)#                                           (100%)##                                          (100%)###                                         (100%)####                                        (100%)#####                                       (100%)######                                      (100%)#######                                     (100%)########                                    (100%)#########                                   (100%)##########                                  (100%)###########                                 (100%)############                                (100%)#############                               (100%)##############                              (100%)###############                             (100%)################                            (100%)#################                           (100%)##################                          (100%)###################                         (100%)####################                        (100%)#####################                       (100%)######################                      (100%)#######################                     (100%)########################                    (100%)#########################                   (100%)##########################                  (100%)###########################                 (100%)############################                (100%)#############################               (100%)##############################              (100%)###############################             (100%)################################            (100%)#################################           (100%)##################################          (100%)###################################         (100%)####################################        (100%)#####################################       (100%)######################################      (100%)#######################################     (100%)########################################    (100%)I, [2016-05-20T10:48:48.940591 #28084]  INFO -- web-app-1-centos-66: #########################################   (100%)##########################################  (100%)########################################### (100%)########################################### [100%]
+   1:chef                                                               (  1%)#                                           (  3%)##                                          (  6%)###                                         (  8%)####                                        ( 10%)#####                                       ( 13%)######                                      ( 15%)#######                                     ( 17%)########                                    ( 19%)#########                                   ( 22%)##########                                  ( 24%)###########                                 ( 26%)############                                ( 28%)#############                               ( 31%)##############                              ( 33%)###############                             ( 35%)################                            ( 38%)#################                           ( 40%)##################                          ( 42%)###################                         ( 44%)####################                        ( 47%)#####################                       ( 49%)######################                      ( 51%)#######################                     ( 53%)########################                    ( 56%)#########################                   ( 58%)##########################                  ( 60%)###########################                 ( 63%)############################                ( 65%)#############################               ( 67%)##############################              ( 69%)###############################             ( 72%)################################            ( 74%)#################################           ( 76%)##################################          ( 78%)###################################         ( 81%)####################################        ( 83%)#####################################       ( 85%)######################################      ( 88%)#######################################     ( 90%)########################################    ( 92%)#########################################   ( 94%)##########################################  ( 97%)I, [2016-05-20T10:48:52.802402 #28084]  INFO -- web-app-1-centos-66: ########################################### ( 99%)########################################### [100%]
+I, [2016-05-20T10:48:53.830930 #28084]  INFO -- web-app-1-centos-66: Thank you for installing Chef!
+I, [2016-05-20T10:48:53.883538 #28084]  INFO -- web-app-1-centos-66: Transfering files to <web-app-1-centos-66>
+I, [2016-05-20T10:48:55.339491 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:55+00:00] INFO: Forking chef instance to converge...
+I, [2016-05-20T10:48:55.624296 #28084]  INFO -- web-app-1-centos-66: Starting Chef Client, version 12.10.24[0m
+I, [2016-05-20T10:48:55.624433 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:55+00:00] INFO: *** Chef 12.10.24 ***
+I, [2016-05-20T10:48:55.624530 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:55+00:00] INFO: Platform: x86_64-linux
+I, [2016-05-20T10:48:55.624572 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:55+00:00] INFO: Chef-client pid: 107
+I, [2016-05-20T10:48:57.521413 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] INFO: Setting the run_list to ["recipe[web-app]"] from CLI options
+I, [2016-05-20T10:48:57.532071 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] INFO: Run List is [recipe[web-app]]
+I, [2016-05-20T10:48:57.532140 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] INFO: Run List expands to [web-app]
+I, [2016-05-20T10:48:57.532237 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] INFO: Starting Chef Run for web-app-1-centos-66
+I, [2016-05-20T10:48:57.532280 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] INFO: Running start handlers
+I, [2016-05-20T10:48:57.532320 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] INFO: Start handlers complete.
+I, [2016-05-20T10:48:57.532359 #28084]  INFO -- web-app-1-centos-66: Installing Cookbook Gems:[0m
+I, [2016-05-20T10:48:57.532413 #28084]  INFO -- web-app-1-centos-66: Compiling Cookbooks...[0m
+I, [2016-05-20T10:48:57.532452 #28084]  INFO -- web-app-1-centos-66: [0m
+I, [2016-05-20T10:48:57.532490 #28084]  INFO -- web-app-1-centos-66: Running handlers:[0m
+I, [2016-05-20T10:48:57.532528 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] ERROR: Running exception handlers
+I, [2016-05-20T10:48:57.532565 #28084]  INFO -- web-app-1-centos-66: Running handlers complete
+I, [2016-05-20T10:48:57.532602 #28084]  INFO -- web-app-1-centos-66: [0m[2016-05-20T15:48:57+00:00] ERROR: Exception handlers complete
+I, [2016-05-20T10:48:57.532640 #28084]  INFO -- web-app-1-centos-66: Chef Client failed. 0 resources updated in 02 seconds[0m
+I, [2016-05-20T10:48:57.532715 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2016-05-20T10:48:57.532756 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2016-05-20T10:48:57.532802 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] ERROR: Cookbook web-app not found. If you're loading web-app from another cookbook, make sure you configure the dependency in your metadata
+I, [2016-05-20T10:48:57.609382 #28084]  INFO -- web-app-1-centos-66: [2016-05-20T15:48:57+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2016-05-20T10:48:57.657517 #28084] ERROR -- web-app-1-centos-66: Converge failed on instance <web-app-1-centos-66>.
+E, [2016-05-20T10:48:57.657728 #28084] ERROR -- web-app-1-centos-66: ------Exception-------
+E, [2016-05-20T10:48:57.657781 #28084] ERROR -- web-app-1-centos-66: Class: Kitchen::ActionFailed
+E, [2016-05-20T10:48:57.657821 #28084] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-20T10:48:57.657857 #28084] ERROR -- web-app-1-centos-66: ---Nested Exception---
+E, [2016-05-20T10:48:57.657947 #28084] ERROR -- web-app-1-centos-66: Class: Kitchen::SSHFailed
+E, [2016-05-20T10:48:57.657990 #28084] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-20T10:48:57.658027 #28084] ERROR -- web-app-1-centos-66: ------Backtrace-------
+E, [2016-05-20T10:48:57.658062 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:112:in `rescue in run_remote'
+E, [2016-05-20T10:48:57.658128 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:108:in `run_remote'
+E, [2016-05-20T10:48:57.658169 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:48:in `block in converge'
+E, [2016-05-20T10:48:57.658204 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/ssh.rb:47:in `initialize'
+E, [2016-05-20T10:48:57.658239 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `new'
+E, [2016-05-20T10:48:57.658274 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `converge'
+E, [2016-05-20T10:48:57.658309 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2016-05-20T10:48:57.658350 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2016-05-20T10:48:57.658385 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2016-05-20T10:48:57.658420 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2016-05-20T10:48:57.658454 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2016-05-20T10:48:57.658488 #28084] ERROR -- web-app-1-centos-66: /usr/local/rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-05-20T10:48:57.658523 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2016-05-20T10:48:57.658557 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2016-05-20T10:48:57.658592 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+E, [2016-05-20T10:48:57.658632 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2016-05-20T10:48:57.658694 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2016-05-20T10:48:57.658732 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2016-05-20T10:48:57.658768 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:119:in `converge'
+E, [2016-05-20T10:48:57.658803 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+E, [2016-05-20T10:48:57.658838 #28084] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2016-05-20T10:48:57.658950 #28084] ERROR -- web-app-1-centos-66: ----------------------
+I, [2016-05-20T10:51:34.721530 #28439]  INFO -- web-app-1-centos-66: -----> Converging <web-app-1-centos-66>...
+I, [2016-05-20T10:51:34.722269 #28439]  INFO -- web-app-1-centos-66: Preparing files for transfer
+I, [2016-05-20T10:51:34.722699 #28439]  INFO -- web-app-1-centos-66: Resolving cookbook dependencies with Berkshelf 4.2.0...
+I, [2016-05-20T10:51:34.735374 #28439]  INFO -- web-app-1-centos-66: Removing non-cookbook files before transfer
+I, [2016-05-20T10:51:34.872975 #28439]  INFO -- web-app-1-centos-66: Transfering files to <web-app-1-centos-66>
+I, [2016-05-20T10:51:36.348304 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:36+00:00] INFO: Forking chef instance to converge...
+I, [2016-05-20T10:51:36.367224 #28439]  INFO -- web-app-1-centos-66: Starting Chef Client, version 12.10.24[0m
+I, [2016-05-20T10:51:36.367315 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:36+00:00] INFO: *** Chef 12.10.24 ***
+I, [2016-05-20T10:51:36.367363 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:36+00:00] INFO: Platform: x86_64-linux
+I, [2016-05-20T10:51:36.367404 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:36+00:00] INFO: Chef-client pid: 325
+I, [2016-05-20T10:51:37.771383 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] INFO: Setting the run_list to ["recipe[web-app]"] from CLI options
+I, [2016-05-20T10:51:37.777574 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] INFO: Run List is [recipe[web-app]]
+I, [2016-05-20T10:51:37.777685 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] INFO: Run List expands to [web-app]
+I, [2016-05-20T10:51:37.777739 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] INFO: Starting Chef Run for web-app-1-centos-66
+I, [2016-05-20T10:51:37.777781 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] INFO: Running start handlers
+I, [2016-05-20T10:51:37.777822 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] INFO: Start handlers complete.
+I, [2016-05-20T10:51:37.779320 #28439]  INFO -- web-app-1-centos-66: Installing Cookbook Gems:[0m
+I, [2016-05-20T10:51:37.779383 #28439]  INFO -- web-app-1-centos-66: Compiling Cookbooks...[0m
+I, [2016-05-20T10:51:37.779425 #28439]  INFO -- web-app-1-centos-66: [0m
+I, [2016-05-20T10:51:37.779503 #28439]  INFO -- web-app-1-centos-66: Running handlers:[0m
+I, [2016-05-20T10:51:37.779545 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] ERROR: Running exception handlers
+I, [2016-05-20T10:51:37.779585 #28439]  INFO -- web-app-1-centos-66: Running handlers complete
+I, [2016-05-20T10:51:37.779624 #28439]  INFO -- web-app-1-centos-66: [0m[2016-05-20T15:51:37+00:00] ERROR: Exception handlers complete
+I, [2016-05-20T10:51:37.779699 #28439]  INFO -- web-app-1-centos-66: Chef Client failed. 0 resources updated in 01 seconds[0m
+I, [2016-05-20T10:51:37.786136 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2016-05-20T10:51:37.786220 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2016-05-20T10:51:37.786264 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] ERROR: Cookbook web-app not found. If you're loading web-app from another cookbook, make sure you configure the dependency in your metadata
+I, [2016-05-20T10:51:37.857350 #28439]  INFO -- web-app-1-centos-66: [2016-05-20T15:51:37+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2016-05-20T10:51:37.898218 #28439] ERROR -- web-app-1-centos-66: Converge failed on instance <web-app-1-centos-66>.
+E, [2016-05-20T10:51:37.898367 #28439] ERROR -- web-app-1-centos-66: ------Exception-------
+E, [2016-05-20T10:51:37.898416 #28439] ERROR -- web-app-1-centos-66: Class: Kitchen::ActionFailed
+E, [2016-05-20T10:51:37.898489 #28439] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-20T10:51:37.898531 #28439] ERROR -- web-app-1-centos-66: ---Nested Exception---
+E, [2016-05-20T10:51:37.898567 #28439] ERROR -- web-app-1-centos-66: Class: Kitchen::SSHFailed
+E, [2016-05-20T10:51:37.898604 #28439] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-20T10:51:37.898639 #28439] ERROR -- web-app-1-centos-66: ------Backtrace-------
+E, [2016-05-20T10:51:37.898702 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:112:in `rescue in run_remote'
+E, [2016-05-20T10:51:37.898741 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:108:in `run_remote'
+E, [2016-05-20T10:51:37.898778 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:48:in `block in converge'
+E, [2016-05-20T10:51:37.898813 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/ssh.rb:47:in `initialize'
+E, [2016-05-20T10:51:37.898849 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `new'
+E, [2016-05-20T10:51:37.898885 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `converge'
+E, [2016-05-20T10:51:37.898920 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2016-05-20T10:51:37.898956 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2016-05-20T10:51:37.899020 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2016-05-20T10:51:37.899058 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2016-05-20T10:51:37.899094 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2016-05-20T10:51:37.899148 #28439] ERROR -- web-app-1-centos-66: /usr/local/rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-05-20T10:51:37.899188 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2016-05-20T10:51:37.899225 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2016-05-20T10:51:37.899261 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+E, [2016-05-20T10:51:37.899296 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2016-05-20T10:51:37.899348 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2016-05-20T10:51:37.899388 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2016-05-20T10:51:37.899423 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:119:in `converge'
+E, [2016-05-20T10:51:37.899459 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+E, [2016-05-20T10:51:37.899494 #28439] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2016-05-20T10:51:37.899530 #28439] ERROR -- web-app-1-centos-66: ----------------------
+I, [2016-05-20T10:55:18.316967 #28772]  INFO -- web-app-1-centos-66: -----> Converging <web-app-1-centos-66>...
+I, [2016-05-20T10:55:18.317767 #28772]  INFO -- web-app-1-centos-66: Preparing files for transfer
+I, [2016-05-20T10:55:18.318140 #28772]  INFO -- web-app-1-centos-66: Resolving cookbook dependencies with Berkshelf 4.2.0...
+I, [2016-05-20T10:55:25.997790 #28772]  INFO -- web-app-1-centos-66: Removing non-cookbook files before transfer
+I, [2016-05-20T10:55:26.325353 #28772]  INFO -- web-app-1-centos-66: Transfering files to <web-app-1-centos-66>
+I, [2016-05-20T10:55:29.231937 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:29+00:00] INFO: Forking chef instance to converge...
+I, [2016-05-20T10:55:29.389587 #28772]  INFO -- web-app-1-centos-66: Starting Chef Client, version 12.10.24[0m
+I, [2016-05-20T10:55:29.389776 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:29+00:00] INFO: *** Chef 12.10.24 ***
+I, [2016-05-20T10:55:29.389916 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:29+00:00] INFO: Platform: x86_64-linux
+I, [2016-05-20T10:55:29.390000 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:29+00:00] INFO: Chef-client pid: 548
+I, [2016-05-20T10:55:30.790405 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:30+00:00] INFO: Setting the run_list to ["recipe[web-app]"] from CLI options
+I, [2016-05-20T10:55:30.797038 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:30+00:00] INFO: Run List is [recipe[web-app]]
+I, [2016-05-20T10:55:30.797107 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:30+00:00] INFO: Run List expands to [web-app]
+I, [2016-05-20T10:55:30.797153 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:30+00:00] INFO: Starting Chef Run for web-app-1-centos-66
+I, [2016-05-20T10:55:30.797195 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:30+00:00] INFO: Running start handlers
+I, [2016-05-20T10:55:30.797235 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:30+00:00] INFO: Start handlers complete.
+I, [2016-05-20T10:55:30.837079 #28772]  INFO -- web-app-1-centos-66: Installing Cookbook Gems:[0m
+I, [2016-05-20T10:55:30.837154 #28772]  INFO -- web-app-1-centos-66: Compiling Cookbooks...[0m
+I, [2016-05-20T10:55:30.837199 #28772]  INFO -- web-app-1-centos-66: Converging 5 resources[0m
+I, [2016-05-20T10:55:30.837239 #28772]  INFO -- web-app-1-centos-66: Recipe: web-app::default[0m
+I, [2016-05-20T10:55:30.837278 #28772]  INFO -- web-app-1-centos-66:   * directory[/opt/web-app] action create[2016-05-20T15:55:30+00:00] INFO: Processing directory[/opt/web-app] action create (web-app::default line 14)
+I, [2016-05-20T10:55:30.839737 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:30+00:00] INFO: directory[/opt/web-app] created directory /opt/web-app
+I, [2016-05-20T10:55:30.839802 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:30.839864 #28772]  INFO -- web-app-1-centos-66:     [32m- create new directory /opt/web-app[0m[2016-05-20T15:55:30+00:00] INFO: directory[/opt/web-app] mode changed to 755
+I, [2016-05-20T10:55:30.839954 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:30.839999 #28772]  INFO -- web-app-1-centos-66:     [32m- change mode from '' to '0755'[0m
+I, [2016-05-20T10:55:30.860059 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:30.860166 #28772]  INFO -- web-app-1-centos-66: [0m  * gem_package[sinatra] action install[2016-05-20T15:55:30+00:00] INFO: Processing gem_package[sinatra] action install (web-app::default line 21)
+I, [2016-05-20T10:55:34.749320 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:34+00:00] INFO: gem_package[sinatra] installed sinatra at 1.4.7
+I, [2016-05-20T10:55:34.749456 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:34.749504 #28772]  INFO -- web-app-1-centos-66:     [32m- install version 1.4.7 of package sinatra[0m
+I, [2016-05-20T10:55:34.749545 #28772]  INFO -- web-app-1-centos-66: [0m  * gem_package[puma] action install[2016-05-20T15:55:34+00:00] INFO: Processing gem_package[puma] action install (web-app::default line 21)
+I, [2016-05-20T10:55:37.127274 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:37.127400 #28772]  INFO -- web-app-1-centos-66:     [0m
+I, [2016-05-20T10:55:37.127448 #28772]  INFO -- web-app-1-centos-66:     ================================================================================[0m
+I, [2016-05-20T10:55:37.127492 #28772]  INFO -- web-app-1-centos-66:     [31mError executing action `install` on resource 'gem_package[puma]'[0m
+I, [2016-05-20T10:55:37.127532 #28772]  INFO -- web-app-1-centos-66:     ================================================================================[0m
+I, [2016-05-20T10:55:37.127572 #28772]  INFO -- web-app-1-centos-66:     
+I, [2016-05-20T10:55:37.127610 #28772]  INFO -- web-app-1-centos-66: [0m    Mixlib::ShellOut::ShellCommandFailed[0m
+I, [2016-05-20T10:55:37.127698 #28772]  INFO -- web-app-1-centos-66:     ------------------------------------[0m
+I, [2016-05-20T10:55:37.127744 #28772]  INFO -- web-app-1-centos-66:     Expected process to exit with [0], but received '1'
+I, [2016-05-20T10:55:37.127785 #28772]  INFO -- web-app-1-centos-66: [0m    ---- Begin output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-20T10:55:37.127825 #28772]  INFO -- web-app-1-centos-66: [0m    STDOUT: Building native extensions.  This could take a while...
+I, [2016-05-20T10:55:37.127863 #28772]  INFO -- web-app-1-centos-66: [0m    STDERR: ERROR:  Error installing puma:
+I, [2016-05-20T10:55:37.127902 #28772]  INFO -- web-app-1-centos-66: [0m    	ERROR: Failed to build gem native extension.
+I, [2016-05-20T10:55:37.127940 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.127980 #28772]  INFO -- web-app-1-centos-66: [0m        current directory: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0/ext/puma_http11
+I, [2016-05-20T10:55:37.128019 #28772]  INFO -- web-app-1-centos-66: [0m    /opt/chef/embedded/bin/ruby -r ./siteconf20160520-742-11jx7lp.rb extconf.rb
+I, [2016-05-20T10:55:37.128057 #28772]  INFO -- web-app-1-centos-66: [0m    checking for BIO_read() in -lcrypto... *** extconf.rb failed ***
+I, [2016-05-20T10:55:37.128095 #28772]  INFO -- web-app-1-centos-66: [0m    Could not create Makefile due to some reason, probably lack of necessary
+I, [2016-05-20T10:55:37.128157 #28772]  INFO -- web-app-1-centos-66: [0m    libraries and/or headers.  Check the mkmf.log file for more details.  You may
+I, [2016-05-20T10:55:37.128198 #28772]  INFO -- web-app-1-centos-66: [0m    need configuration options.
+I, [2016-05-20T10:55:37.128236 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.128273 #28772]  INFO -- web-app-1-centos-66: [0m    Provided configuration options:
+I, [2016-05-20T10:55:37.128310 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-opt-dir
+I, [2016-05-20T10:55:37.128347 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-opt-include
+I, [2016-05-20T10:55:37.128424 #28772]  INFO -- web-app-1-centos-66: [0m    	--without-opt-include=${opt-dir}/include
+I, [2016-05-20T10:55:37.128468 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-opt-lib
+I, [2016-05-20T10:55:37.128507 #28772]  INFO -- web-app-1-centos-66: [0m    	--without-opt-lib=${opt-dir}/lib
+I, [2016-05-20T10:55:37.128544 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-make-prog
+I, [2016-05-20T10:55:37.128582 #28772]  INFO -- web-app-1-centos-66: [0m    	--without-make-prog
+I, [2016-05-20T10:55:37.128620 #28772]  INFO -- web-app-1-centos-66: [0m    	--srcdir=.
+I, [2016-05-20T10:55:37.128693 #28772]  INFO -- web-app-1-centos-66: [0m    	--curdir
+I, [2016-05-20T10:55:37.128736 #28772]  INFO -- web-app-1-centos-66: [0m    	--ruby=/opt/chef/embedded/bin/ruby
+I, [2016-05-20T10:55:37.128775 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-dir
+I, [2016-05-20T10:55:37.128853 #28772]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-dir
+I, [2016-05-20T10:55:37.128892 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-include
+I, [2016-05-20T10:55:37.128930 #28772]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-include=${puma_http11-dir}/include
+I, [2016-05-20T10:55:37.128968 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-lib
+I, [2016-05-20T10:55:37.129006 #28772]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-lib=${puma_http11-dir}/lib
+I, [2016-05-20T10:55:37.129044 #28772]  INFO -- web-app-1-centos-66: [0m    	--with-cryptolib
+I, [2016-05-20T10:55:37.129083 #28772]  INFO -- web-app-1-centos-66: [0m    	--without-cryptolib
+I, [2016-05-20T10:55:37.129122 #28772]  INFO -- web-app-1-centos-66: [0m    /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:467:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+I, [2016-05-20T10:55:37.129161 #28772]  INFO -- web-app-1-centos-66: [0m    You have to install development tools first.
+I, [2016-05-20T10:55:37.129201 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:552:in `try_link0'
+I, [2016-05-20T10:55:37.129240 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:567:in `try_link'
+I, [2016-05-20T10:55:37.129279 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:747:in `try_func'
+I, [2016-05-20T10:55:37.129319 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:978:in `block in have_library'
+I, [2016-05-20T10:55:37.129358 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:923:in `block in checking_for'
+I, [2016-05-20T10:55:37.129398 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block (2 levels) in postpone'
+I, [2016-05-20T10:55:37.129437 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-20T10:55:37.129500 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block in postpone'
+I, [2016-05-20T10:55:37.129540 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-20T10:55:37.129578 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:347:in `postpone'
+I, [2016-05-20T10:55:37.129617 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:922:in `checking_for'
+I, [2016-05-20T10:55:37.129686 #28772]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:973:in `have_library'
+I, [2016-05-20T10:55:37.129729 #28772]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `block in <main>'
+I, [2016-05-20T10:55:37.129768 #28772]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `each'
+I, [2016-05-20T10:55:37.129824 #28772]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `find'
+I, [2016-05-20T10:55:37.129867 #28772]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `<main>'
+I, [2016-05-20T10:55:37.129906 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.129972 #28772]  INFO -- web-app-1-centos-66: [0m    To see why this extension failed to compile, please check the mkmf.log which can be found here:
+I, [2016-05-20T10:55:37.130012 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.130050 #28772]  INFO -- web-app-1-centos-66: [0m      /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/mkmf.log
+I, [2016-05-20T10:55:37.130089 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.130128 #28772]  INFO -- web-app-1-centos-66: [0m    extconf failed, exit code 1
+I, [2016-05-20T10:55:37.130166 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.130205 #28772]  INFO -- web-app-1-centos-66: [0m    Gem files will remain installed in /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0 for inspection.
+I, [2016-05-20T10:55:37.130245 #28772]  INFO -- web-app-1-centos-66: [0m    Results logged to /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/gem_make.out
+I, [2016-05-20T10:55:37.130284 #28772]  INFO -- web-app-1-centos-66: [0m    ---- End output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-20T10:55:37.130323 #28772]  INFO -- web-app-1-centos-66: [0m    Ran /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" returned 1[0m
+I, [2016-05-20T10:55:37.130363 #28772]  INFO -- web-app-1-centos-66:     
+I, [2016-05-20T10:55:37.130401 #28772]  INFO -- web-app-1-centos-66: [0m    Resource Declaration:[0m
+I, [2016-05-20T10:55:37.130439 #28772]  INFO -- web-app-1-centos-66:     ---------------------[0m
+I, [2016-05-20T10:55:37.130502 #28772]  INFO -- web-app-1-centos-66:     # In /tmp/kitchen/cookbooks/web-app/recipes/default.rb
+I, [2016-05-20T10:55:37.130542 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.130580 #28772]  INFO -- web-app-1-centos-66: [0m     21:  gem_package "#{p}" do
+I, [2016-05-20T10:55:37.130617 #28772]  INFO -- web-app-1-centos-66: [0m 
+I, [2016-05-20T10:55:37.132919 #28772]  INFO -- web-app-1-centos-66:     22:   gem_binary "#{chef_path}/gem"
+I, [2016-05-20T10:55:37.132983 #28772]  INFO -- web-app-1-centos-66: [0m     23:   action :install
+I, [2016-05-20T10:55:37.133025 #28772]  INFO -- web-app-1-centos-66: [0m     24:  end
+I, [2016-05-20T10:55:37.133064 #28772]  INFO -- web-app-1-centos-66: [0m     25: end
+I, [2016-05-20T10:55:37.133101 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.133139 #28772]  INFO -- web-app-1-centos-66: [0m    Compiled Resource:[0m
+I, [2016-05-20T10:55:37.133177 #28772]  INFO -- web-app-1-centos-66:     ------------------[0m
+I, [2016-05-20T10:55:37.133215 #28772]  INFO -- web-app-1-centos-66:     # Declared in /tmp/kitchen/cookbooks/web-app/recipes/default.rb:21:in `block in from_file'
+I, [2016-05-20T10:55:37.133305 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.133347 #28772]  INFO -- web-app-1-centos-66: [0m    gem_package("puma") do
+I, [2016-05-20T10:55:37.133385 #28772]  INFO -- web-app-1-centos-66: [0m      package_name "puma"
+I, [2016-05-20T10:55:37.133423 #28772]  INFO -- web-app-1-centos-66: [0m      action [:install]
+I, [2016-05-20T10:55:37.133461 #28772]  INFO -- web-app-1-centos-66: [0m      retries 0
+I, [2016-05-20T10:55:37.133500 #28772]  INFO -- web-app-1-centos-66: [0m      retry_delay 2
+I, [2016-05-20T10:55:37.133538 #28772]  INFO -- web-app-1-centos-66: [0m      default_guard_interpreter :default
+I, [2016-05-20T10:55:37.133575 #28772]  INFO -- web-app-1-centos-66: [0m      declared_type :gem_package
+I, [2016-05-20T10:55:37.133614 #28772]  INFO -- web-app-1-centos-66: [0m      cookbook_name :"web-app"
+I, [2016-05-20T10:55:37.133675 #28772]  INFO -- web-app-1-centos-66: [0m      recipe_name "default"
+I, [2016-05-20T10:55:37.133740 #28772]  INFO -- web-app-1-centos-66: [0m      gem_binary "/opt/chef/embedded/bin/gem"
+I, [2016-05-20T10:55:37.133785 #28772]  INFO -- web-app-1-centos-66: [0m    end
+I, [2016-05-20T10:55:37.133855 #28772]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-20T10:55:37.133896 #28772]  INFO -- web-app-1-centos-66: [0m    Platform:[0m
+I, [2016-05-20T10:55:37.133934 #28772]  INFO -- web-app-1-centos-66:     ---------[0m
+I, [2016-05-20T10:55:37.133971 #28772]  INFO -- web-app-1-centos-66:     x86_64-linux[0m
+I, [2016-05-20T10:55:37.134008 #28772]  INFO -- web-app-1-centos-66:     
+I, [2016-05-20T10:55:37.134046 #28772]  INFO -- web-app-1-centos-66: [0m[2016-05-20T15:55:37+00:00] INFO: Running queued delayed notifications before re-raising exception
+I, [2016-05-20T10:55:37.134084 #28772]  INFO -- web-app-1-centos-66: [0m
+I, [2016-05-20T10:55:37.134122 #28772]  INFO -- web-app-1-centos-66: Running handlers:[0m
+I, [2016-05-20T10:55:37.134160 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:37+00:00] ERROR: Running exception handlers
+I, [2016-05-20T10:55:37.134199 #28772]  INFO -- web-app-1-centos-66: Running handlers complete
+I, [2016-05-20T10:55:37.134237 #28772]  INFO -- web-app-1-centos-66: [0m[2016-05-20T15:55:37+00:00] ERROR: Exception handlers complete
+I, [2016-05-20T10:55:37.134306 #28772]  INFO -- web-app-1-centos-66: Chef Client failed. 2 resources updated in 07 seconds[0m
+I, [2016-05-20T10:55:37.134348 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:37+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2016-05-20T10:55:37.134387 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:37+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2016-05-20T10:55:37.134427 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:37+00:00] ERROR: gem_package[puma] (web-app::default line 21) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+I, [2016-05-20T10:55:37.134467 #28772]  INFO -- web-app-1-centos-66: ---- Begin output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-20T10:55:37.134506 #28772]  INFO -- web-app-1-centos-66: STDOUT: Building native extensions.  This could take a while...
+I, [2016-05-20T10:55:37.134545 #28772]  INFO -- web-app-1-centos-66: STDERR: ERROR:  Error installing puma:
+I, [2016-05-20T10:55:37.134582 #28772]  INFO -- web-app-1-centos-66: 	ERROR: Failed to build gem native extension.
+I, [2016-05-20T10:55:37.134619 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:37.134683 #28772]  INFO -- web-app-1-centos-66:     current directory: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0/ext/puma_http11
+I, [2016-05-20T10:55:37.134727 #28772]  INFO -- web-app-1-centos-66: /opt/chef/embedded/bin/ruby -r ./siteconf20160520-742-11jx7lp.rb extconf.rb
+I, [2016-05-20T10:55:37.134766 #28772]  INFO -- web-app-1-centos-66: checking for BIO_read() in -lcrypto... *** extconf.rb failed ***
+I, [2016-05-20T10:55:37.134838 #28772]  INFO -- web-app-1-centos-66: Could not create Makefile due to some reason, probably lack of necessary
+I, [2016-05-20T10:55:37.134880 #28772]  INFO -- web-app-1-centos-66: libraries and/or headers.  Check the mkmf.log file for more details.  You may
+I, [2016-05-20T10:55:37.134919 #28772]  INFO -- web-app-1-centos-66: need configuration options.
+I, [2016-05-20T10:55:37.134958 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:37.134995 #28772]  INFO -- web-app-1-centos-66: Provided configuration options:
+I, [2016-05-20T10:55:37.135032 #28772]  INFO -- web-app-1-centos-66: 	--with-opt-dir
+I, [2016-05-20T10:55:37.135069 #28772]  INFO -- web-app-1-centos-66: 	--with-opt-include
+I, [2016-05-20T10:55:37.135107 #28772]  INFO -- web-app-1-centos-66: 	--without-opt-include=${opt-dir}/include
+I, [2016-05-20T10:55:37.135144 #28772]  INFO -- web-app-1-centos-66: 	--with-opt-lib
+I, [2016-05-20T10:55:37.135198 #28772]  INFO -- web-app-1-centos-66: 	--without-opt-lib=${opt-dir}/lib
+I, [2016-05-20T10:55:37.135241 #28772]  INFO -- web-app-1-centos-66: 	--with-make-prog
+I, [2016-05-20T10:55:37.135279 #28772]  INFO -- web-app-1-centos-66: 	--without-make-prog
+I, [2016-05-20T10:55:37.135317 #28772]  INFO -- web-app-1-centos-66: 	--srcdir=.
+I, [2016-05-20T10:55:37.135355 #28772]  INFO -- web-app-1-centos-66: 	--curdir
+I, [2016-05-20T10:55:37.135393 #28772]  INFO -- web-app-1-centos-66: 	--ruby=/opt/chef/embedded/bin/ruby
+I, [2016-05-20T10:55:37.135459 #28772]  INFO -- web-app-1-centos-66: 	--with-puma_http11-dir
+I, [2016-05-20T10:55:37.135501 #28772]  INFO -- web-app-1-centos-66: 	--without-puma_http11-dir
+I, [2016-05-20T10:55:37.135540 #28772]  INFO -- web-app-1-centos-66: 	--with-puma_http11-include
+I, [2016-05-20T10:55:37.135580 #28772]  INFO -- web-app-1-centos-66: 	--without-puma_http11-include=${puma_http11-dir}/include
+I, [2016-05-20T10:55:37.135619 #28772]  INFO -- web-app-1-centos-66: 	--with-puma_http11-lib
+I, [2016-05-20T10:55:37.135679 #28772]  INFO -- web-app-1-centos-66: 	--without-puma_http11-lib=${puma_http11-dir}/lib
+I, [2016-05-20T10:55:37.135722 #28772]  INFO -- web-app-1-centos-66: 	--with-cryptolib
+I, [2016-05-20T10:55:37.135761 #28772]  INFO -- web-app-1-centos-66: 	--without-cryptolib
+I, [2016-05-20T10:55:37.135799 #28772]  INFO -- web-app-1-centos-66: /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:467:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+I, [2016-05-20T10:55:37.135838 #28772]  INFO -- web-app-1-centos-66: You have to install development tools first.
+I, [2016-05-20T10:55:37.135875 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:552:in `try_link0'
+I, [2016-05-20T10:55:37.135914 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:567:in `try_link'
+I, [2016-05-20T10:55:37.135953 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:747:in `try_func'
+I, [2016-05-20T10:55:37.135991 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:978:in `block in have_library'
+I, [2016-05-20T10:55:37.136031 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:923:in `block in checking_for'
+I, [2016-05-20T10:55:37.136098 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block (2 levels) in postpone'
+I, [2016-05-20T10:55:37.136137 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-20T10:55:37.136176 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block in postpone'
+I, [2016-05-20T10:55:37.136214 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-20T10:55:37.136252 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:347:in `postpone'
+I, [2016-05-20T10:55:37.136291 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:922:in `checking_for'
+I, [2016-05-20T10:55:37.136329 #28772]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:973:in `have_library'
+I, [2016-05-20T10:55:37.136367 #28772]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `block in <main>'
+I, [2016-05-20T10:55:37.136405 #28772]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `each'
+I, [2016-05-20T10:55:37.136442 #28772]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `find'
+I, [2016-05-20T10:55:37.136480 #28772]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `<main>'
+I, [2016-05-20T10:55:37.136518 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:37.136555 #28772]  INFO -- web-app-1-centos-66: To see why this extension failed to compile, please check the mkmf.log which can be found here:
+I, [2016-05-20T10:55:37.136593 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:37.136682 #28772]  INFO -- web-app-1-centos-66:   /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/mkmf.log
+I, [2016-05-20T10:55:37.136736 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:37.136775 #28772]  INFO -- web-app-1-centos-66: extconf failed, exit code 1
+I, [2016-05-20T10:55:37.136812 #28772]  INFO -- web-app-1-centos-66: 
+I, [2016-05-20T10:55:37.136849 #28772]  INFO -- web-app-1-centos-66: Gem files will remain installed in
+I, [2016-05-20T10:55:37.138772 #28772]  INFO -- web-app-1-centos-66:  /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0 for inspection.
+I, [2016-05-20T10:55:37.138835 #28772]  INFO -- web-app-1-centos-66: Results logged to /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/gem_make.out
+I, [2016-05-20T10:55:37.138878 #28772]  INFO -- web-app-1-centos-66: ---- End output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-20T10:55:37.138917 #28772]  INFO -- web-app-1-centos-66: Ran /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" returned 1
+I, [2016-05-20T10:55:37.205314 #28772]  INFO -- web-app-1-centos-66: [2016-05-20T15:55:37+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2016-05-20T10:55:37.339059 #28772] ERROR -- web-app-1-centos-66: Converge failed on instance <web-app-1-centos-66>.
+E, [2016-05-20T10:55:37.339301 #28772] ERROR -- web-app-1-centos-66: ------Exception-------
+E, [2016-05-20T10:55:37.339355 #28772] ERROR -- web-app-1-centos-66: Class: Kitchen::ActionFailed
+E, [2016-05-20T10:55:37.339392 #28772] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-20T10:55:37.339429 #28772] ERROR -- web-app-1-centos-66: ---Nested Exception---
+E, [2016-05-20T10:55:37.339463 #28772] ERROR -- web-app-1-centos-66: Class: Kitchen::SSHFailed
+E, [2016-05-20T10:55:37.339496 #28772] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-20T10:55:37.339532 #28772] ERROR -- web-app-1-centos-66: ------Backtrace-------
+E, [2016-05-20T10:55:37.339566 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:112:in `rescue in run_remote'
+E, [2016-05-20T10:55:37.339601 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:108:in `run_remote'
+E, [2016-05-20T10:55:37.339636 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:48:in `block in converge'
+E, [2016-05-20T10:55:37.339699 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/ssh.rb:47:in `initialize'
+E, [2016-05-20T10:55:37.339736 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `new'
+E, [2016-05-20T10:55:37.339772 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `converge'
+E, [2016-05-20T10:55:37.339808 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2016-05-20T10:55:37.339843 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2016-05-20T10:55:37.339909 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2016-05-20T10:55:37.339951 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2016-05-20T10:55:37.339987 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2016-05-20T10:55:37.340022 #28772] ERROR -- web-app-1-centos-66: /usr/local/rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-05-20T10:55:37.340058 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2016-05-20T10:55:37.340093 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2016-05-20T10:55:37.340176 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+E, [2016-05-20T10:55:37.340221 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2016-05-20T10:55:37.340257 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2016-05-20T10:55:37.340292 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2016-05-20T10:55:37.340326 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:119:in `converge'
+E, [2016-05-20T10:55:37.340361 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+E, [2016-05-20T10:55:37.340395 #28772] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2016-05-20T10:55:37.340430 #28772] ERROR -- web-app-1-centos-66: ----------------------
+I, [2016-05-22T02:28:11.779671 #25816]  INFO -- web-app-1-centos-66: -----> Converging <web-app-1-centos-66>...
+I, [2016-05-22T02:28:11.780396 #25816]  INFO -- web-app-1-centos-66: Preparing files for transfer
+I, [2016-05-22T02:28:11.780775 #25816]  INFO -- web-app-1-centos-66: Resolving cookbook dependencies with Berkshelf 4.2.0...
+I, [2016-05-22T02:28:19.343871 #25816]  INFO -- web-app-1-centos-66: Removing non-cookbook files before transfer
+I, [2016-05-22T02:28:19.838278 #25816]  INFO -- web-app-1-centos-66: Transfering files to <web-app-1-centos-66>
+I, [2016-05-22T02:28:23.112889 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:23+00:00] INFO: Forking chef instance to converge...
+I, [2016-05-22T02:28:23.529287 #25816]  INFO -- web-app-1-centos-66: Starting Chef Client, version 12.10.24[0m
+I, [2016-05-22T02:28:23.529414 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:23+00:00] INFO: *** Chef 12.10.24 ***
+I, [2016-05-22T02:28:23.529464 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:23+00:00] INFO: Platform: x86_64-linux
+I, [2016-05-22T02:28:23.529507 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:23+00:00] INFO: Chef-client pid: 794
+I, [2016-05-22T02:28:24.957412 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:24+00:00] INFO: Setting the run_list to ["recipe[web-app]"] from CLI options
+I, [2016-05-22T02:28:24.964023 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:24+00:00] INFO: Run List is [recipe[web-app]]
+I, [2016-05-22T02:28:24.964094 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:24+00:00] INFO: Run List expands to [web-app]
+I, [2016-05-22T02:28:24.964143 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:24+00:00] INFO: Starting Chef Run for web-app-1-centos-66
+I, [2016-05-22T02:28:24.964185 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:24+00:00] INFO: Running start handlers
+I, [2016-05-22T02:28:24.964227 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:24+00:00] INFO: Start handlers complete.
+I, [2016-05-22T02:28:25.001428 #25816]  INFO -- web-app-1-centos-66: Installing Cookbook Gems:[0m
+I, [2016-05-22T02:28:25.001559 #25816]  INFO -- web-app-1-centos-66: Compiling Cookbooks...[0m
+I, [2016-05-22T02:28:25.010095 #25816]  INFO -- web-app-1-centos-66: Converging 5 resources[0m
+I, [2016-05-22T02:28:25.010178 #25816]  INFO -- web-app-1-centos-66: Recipe: web-app::default[0m
+I, [2016-05-22T02:28:25.010227 #25816]  INFO -- web-app-1-centos-66:   * directory[/opt/web-app] action create[2016-05-22T07:28:25+00:00] INFO: Processing directory[/opt/web-app] action create (web-app::default line 14)
+I, [2016-05-22T02:28:25.012628 #25816]  INFO -- web-app-1-centos-66:  (up to date)
+I, [2016-05-22T02:28:25.012692 #25816]  INFO -- web-app-1-centos-66:   * gem_package[sinatra] action install[2016-05-22T07:28:25+00:00] INFO: Processing gem_package[sinatra] action install (web-app::default line 21)
+I, [2016-05-22T02:28:26.726352 #25816]  INFO -- web-app-1-centos-66:  (up to date)
+I, [2016-05-22T02:28:26.726491 #25816]  INFO -- web-app-1-centos-66:   * gem_package[puma] action install[2016-05-22T07:28:26+00:00] INFO: Processing gem_package[puma] action install (web-app::default line 21)
+I, [2016-05-22T02:28:28.097872 #25816]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:28:28.098010 #25816]  INFO -- web-app-1-centos-66:     [0m
+I, [2016-05-22T02:28:28.098060 #25816]  INFO -- web-app-1-centos-66:     ================================================================================[0m
+I, [2016-05-22T02:28:28.098103 #25816]  INFO -- web-app-1-centos-66:     [31mError executing action `install` on resource 'gem_package[puma]'[0m
+I, [2016-05-22T02:28:28.098146 #25816]  INFO -- web-app-1-centos-66:     ================================================================================[0m
+I, [2016-05-22T02:28:28.098187 #25816]  INFO -- web-app-1-centos-66:     
+I, [2016-05-22T02:28:28.098228 #25816]  INFO -- web-app-1-centos-66: [0m    Mixlib::ShellOut::ShellCommandFailed[0m
+I, [2016-05-22T02:28:28.098269 #25816]  INFO -- web-app-1-centos-66:     ------------------------------------[0m
+I, [2016-05-22T02:28:28.098332 #25816]  INFO -- web-app-1-centos-66:     Expected process to exit with [0], but received '1'
+I, [2016-05-22T02:28:28.098376 #25816]  INFO -- web-app-1-centos-66: [0m    ---- Begin output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:28:28.098418 #25816]  INFO -- web-app-1-centos-66: [0m    STDOUT: Building native extensions.  This could take a while...
+I, [2016-05-22T02:28:28.098460 #25816]  INFO -- web-app-1-centos-66: [0m    STDERR: ERROR:  Error installing puma:
+I, [2016-05-22T02:28:28.098501 #25816]  INFO -- web-app-1-centos-66: [0m    	ERROR: Failed to build gem native extension.
+I, [2016-05-22T02:28:28.098543 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.098585 #25816]  INFO -- web-app-1-centos-66: [0m        current directory: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0/ext/puma_http11
+I, [2016-05-22T02:28:28.098629 #25816]  INFO -- web-app-1-centos-66: [0m    /opt/chef/embedded/bin/ruby -r ./siteconf20160522-981-1515qtw.rb extconf.rb
+I, [2016-05-22T02:28:28.098699 #25816]  INFO -- web-app-1-centos-66: [0m    checking for BIO_read() in -lcrypto... *** extconf.rb failed ***
+I, [2016-05-22T02:28:28.098777 #25816]  INFO -- web-app-1-centos-66: [0m    Could not create Makefile due to some reason, probably lack of necessary
+I, [2016-05-22T02:28:28.098857 #25816]  INFO -- web-app-1-centos-66: [0m    libraries and/or headers.  Check the mkmf.log file for more details.  You may
+I, [2016-05-22T02:28:28.098901 #25816]  INFO -- web-app-1-centos-66: [0m    need configuration options.
+I, [2016-05-22T02:28:28.098942 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.098983 #25816]  INFO -- web-app-1-centos-66: [0m    Provided configuration options:
+I, [2016-05-22T02:28:28.099023 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-opt-dir
+I, [2016-05-22T02:28:28.099063 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-opt-include
+I, [2016-05-22T02:28:28.099104 #25816]  INFO -- web-app-1-centos-66: [0m    	--without-opt-include=${opt-dir}/include
+I, [2016-05-22T02:28:28.099145 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-opt-lib
+I, [2016-05-22T02:28:28.099185 #25816]  INFO -- web-app-1-centos-66: [0m    	--without-opt-lib=${opt-dir}/lib
+I, [2016-05-22T02:28:28.099225 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-make-prog
+I, [2016-05-22T02:28:28.099265 #25816]  INFO -- web-app-1-centos-66: [0m    	--without-make-prog
+I, [2016-05-22T02:28:28.099305 #25816]  INFO -- web-app-1-centos-66: [0m    	--srcdir=.
+I, [2016-05-22T02:28:28.099345 #25816]  INFO -- web-app-1-centos-66: [0m    	--curdir
+I, [2016-05-22T02:28:28.099410 #25816]  INFO -- web-app-1-centos-66: [0m    	--ruby=/opt/chef/embedded/bin/ruby
+I, [2016-05-22T02:28:28.099453 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-dir
+I, [2016-05-22T02:28:28.099492 #25816]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-dir
+I, [2016-05-22T02:28:28.099532 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-include
+I, [2016-05-22T02:28:28.099571 #25816]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-include=${puma_http11-dir}/include
+I, [2016-05-22T02:28:28.099611 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-lib
+I, [2016-05-22T02:28:28.099673 #25816]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-lib=${puma_http11-dir}/lib
+I, [2016-05-22T02:28:28.099721 #25816]  INFO -- web-app-1-centos-66: [0m    	--with-cryptolib
+I, [2016-05-22T02:28:28.099763 #25816]  INFO -- web-app-1-centos-66: [0m    	--without-cryptolib
+I, [2016-05-22T02:28:28.099803 #25816]  INFO -- web-app-1-centos-66: [0m    /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:467:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+I, [2016-05-22T02:28:28.099843 #25816]  INFO -- web-app-1-centos-66: [0m    You have to install development tools first.
+I, [2016-05-22T02:28:28.099883 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:552:in `try_link0'
+I, [2016-05-22T02:28:28.099923 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:567:in `try_link'
+I, [2016-05-22T02:28:28.099987 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:747:in `try_func'
+I, [2016-05-22T02:28:28.100030 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:978:in `block in have_library'
+I, [2016-05-22T02:28:28.100072 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:923:in `block in checking_for'
+I, [2016-05-22T02:28:28.100113 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block (2 levels) in postpone'
+I, [2016-05-22T02:28:28.100153 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:28:28.100194 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block in postpone'
+I, [2016-05-22T02:28:28.100234 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:28:28.100292 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:347:in `postpone'
+I, [2016-05-22T02:28:28.100337 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:922:in `checking_for'
+I, [2016-05-22T02:28:28.100378 #25816]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:973:in `have_library'
+I, [2016-05-22T02:28:28.100419 #25816]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `block in <main>'
+I, [2016-05-22T02:28:28.100459 #25816]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `each'
+I, [2016-05-22T02:28:28.100498 #25816]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `find'
+I, [2016-05-22T02:28:28.100538 #25816]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `<main>'
+I, [2016-05-22T02:28:28.100594 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.100635 #25816]  INFO -- web-app-1-centos-66: [0m    To see why this extension failed to compile, please check the mkmf.log which can be found here:
+I, [2016-05-22T02:28:28.100703 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.100746 #25816]  INFO -- web-app-1-centos-66: [0m      /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/mkmf.log
+I, [2016-05-22T02:28:28.100787 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.100846 #25816]  INFO -- web-app-1-centos-66: [0m    extconf failed, exit code 1
+I, [2016-05-22T02:28:28.100888 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.100928 #25816]  INFO -- web-app-1-centos-66: [0m    Gem files will remain installed in /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0 for inspection.
+I, [2016-05-22T02:28:28.100968 #25816]  INFO -- web-app-1-centos-66: [0m    Results logged to /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/gem_make.out
+I, [2016-05-22T02:28:28.101009 #25816]  INFO -- web-app-1-centos-66: [0m    ---- End output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:28:28.101049 #25816]  INFO -- web-app-1-centos-66: [0m    Ran /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" returned 1[0m
+I, [2016-05-22T02:28:28.101088 #25816]  INFO -- web-app-1-centos-66:     
+I, [2016-05-22T02:28:28.101128 #25816]  INFO -- web-app-1-centos-66: [0m    Resource Declaration:[0m
+I, [2016-05-22T02:28:28.101192 #25816]  INFO -- web-app-1-centos-66:     ---------------------[0m
+I, [2016-05-22T02:28:28.101233 #25816]  INFO -- web-app-1-centos-66:     # In /tmp/kitchen/cookbooks/web-app/recipes/default.rb
+I, [2016-05-22T02:28:28.101272 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.101312 #25816]  INFO -- web-app-1-centos-66: [0m     21:  gem_package "#{p}" do
+I, [2016-05-22T02:28:28.101351 #25816]  INFO -- web-app-1-centos-66: [0m 
+I, [2016-05-22T02:28:28.103135 #25816]  INFO -- web-app-1-centos-66:     22:   gem_binary "#{chef_path}/gem"
+I, [2016-05-22T02:28:28.103199 #25816]  INFO -- web-app-1-centos-66: [0m     23:   action :install
+I, [2016-05-22T02:28:28.103243 #25816]  INFO -- web-app-1-centos-66: [0m     24:  end
+I, [2016-05-22T02:28:28.103283 #25816]  INFO -- web-app-1-centos-66: [0m     25: end
+I, [2016-05-22T02:28:28.103322 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.103363 #25816]  INFO -- web-app-1-centos-66: [0m    Compiled Resource:[0m
+I, [2016-05-22T02:28:28.103402 #25816]  INFO -- web-app-1-centos-66:     ------------------[0m
+I, [2016-05-22T02:28:28.103442 #25816]  INFO -- web-app-1-centos-66:     # Declared in /tmp/kitchen/cookbooks/web-app/recipes/default.rb:21:in `block in from_file'
+I, [2016-05-22T02:28:28.103483 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.103524 #25816]  INFO -- web-app-1-centos-66: [0m    gem_package("puma") do
+I, [2016-05-22T02:28:28.103564 #25816]  INFO -- web-app-1-centos-66: [0m      package_name "puma"
+I, [2016-05-22T02:28:28.103622 #25816]  INFO -- web-app-1-centos-66: [0m      action [:install]
+I, [2016-05-22T02:28:28.103716 #25816]  INFO -- web-app-1-centos-66: [0m      retries 0
+I, [2016-05-22T02:28:28.103762 #25816]  INFO -- web-app-1-centos-66: [0m      retry_delay 2
+I, [2016-05-22T02:28:28.103803 #25816]  INFO -- web-app-1-centos-66: [0m      default_guard_interpreter :default
+I, [2016-05-22T02:28:28.103843 #25816]  INFO -- web-app-1-centos-66: [0m      declared_type :gem_package
+I, [2016-05-22T02:28:28.103884 #25816]  INFO -- web-app-1-centos-66: [0m      cookbook_name :"web-app"
+I, [2016-05-22T02:28:28.103924 #25816]  INFO -- web-app-1-centos-66: [0m      recipe_name "default"
+I, [2016-05-22T02:28:28.103964 #25816]  INFO -- web-app-1-centos-66: [0m      gem_binary "/opt/chef/embedded/bin/gem"
+I, [2016-05-22T02:28:28.104006 #25816]  INFO -- web-app-1-centos-66: [0m    end
+I, [2016-05-22T02:28:28.104046 #25816]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:28:28.104086 #25816]  INFO -- web-app-1-centos-66: [0m    Platform:[0m
+I, [2016-05-22T02:28:28.104125 #25816]  INFO -- web-app-1-centos-66:     ---------[0m
+I, [2016-05-22T02:28:28.104191 #25816]  INFO -- web-app-1-centos-66:     x86_64-linux[0m
+I, [2016-05-22T02:28:28.104234 #25816]  INFO -- web-app-1-centos-66:     
+I, [2016-05-22T02:28:28.104274 #25816]  INFO -- web-app-1-centos-66: [0m[2016-05-22T07:28:28+00:00] INFO: Running queued delayed notifications before re-raising exception
+I, [2016-05-22T02:28:28.104315 #25816]  INFO -- web-app-1-centos-66: [0m
+I, [2016-05-22T02:28:28.104354 #25816]  INFO -- web-app-1-centos-66: Running handlers:[0m
+I, [2016-05-22T02:28:28.104393 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:28+00:00] ERROR: Running exception handlers
+I, [2016-05-22T02:28:28.104435 #25816]  INFO -- web-app-1-centos-66: Running handlers complete
+I, [2016-05-22T02:28:28.104475 #25816]  INFO -- web-app-1-centos-66: [0m[2016-05-22T07:28:28+00:00] ERROR: Exception handlers complete
+I, [2016-05-22T02:28:28.104516 #25816]  INFO -- web-app-1-centos-66: Chef Client failed. 0 resources updated in 04 seconds[0m
+I, [2016-05-22T02:28:28.104556 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:28+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2016-05-22T02:28:28.104597 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:28+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2016-05-22T02:28:28.104638 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:28+00:00] ERROR: gem_package[puma] (web-app::default line 21) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+I, [2016-05-22T02:28:28.104720 #25816]  INFO -- web-app-1-centos-66: ---- Begin output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:28:28.104765 #25816]  INFO -- web-app-1-centos-66: STDOUT: Building native extensions.  This could take a while...
+I, [2016-05-22T02:28:28.104807 #25816]  INFO -- web-app-1-centos-66: STDERR: ERROR:  Error installing puma:
+I, [2016-05-22T02:28:28.104847 #25816]  INFO -- web-app-1-centos-66: 	ERROR: Failed to build gem native extension.
+I, [2016-05-22T02:28:28.104887 #25816]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:28:28.104925 #25816]  INFO -- web-app-1-centos-66:     current directory: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0/ext/puma_http11
+I, [2016-05-22T02:28:28.104988 #25816]  INFO -- web-app-1-centos-66: /opt/chef/embedded/bin/ruby -r ./siteconf20160522-981-1515qtw.rb extconf.rb
+I, [2016-05-22T02:28:28.105036 #25816]  INFO -- web-app-1-centos-66: checking for BIO_read() in -lcrypto... *** extconf.rb failed ***
+I, [2016-05-22T02:28:28.105078 #25816]  INFO -- web-app-1-centos-66: Could not create Makefile due to some reason, probably lack of necessary
+I, [2016-05-22T02:28:28.105119 #25816]  INFO -- web-app-1-centos-66: libraries and/or headers.  Check the mkmf.log file for more details.  You may
+I, [2016-05-22T02:28:28.105176 #25816]  INFO -- web-app-1-centos-66: need configuration options.
+I, [2016-05-22T02:28:28.105220 #25816]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:28:28.105259 #25816]  INFO -- web-app-1-centos-66: Provided configuration options:
+I, [2016-05-22T02:28:28.105299 #25816]  INFO -- web-app-1-centos-66: 	--with-opt-dir
+I, [2016-05-22T02:28:28.105338 #25816]  INFO -- web-app-1-centos-66: 	--with-opt-include
+I, [2016-05-22T02:28:28.105377 #25816]  INFO -- web-app-1-centos-66: 	--without-opt-include=${opt-dir}/include
+I, [2016-05-22T02:28:28.105416 #25816]  INFO -- web-app-1-centos-66: 	--with-opt-lib
+I, [2016-05-22T02:28:28.105520 #25816]  INFO -- web-app-1-centos-66: 	--without-opt-lib=${opt-dir}/lib
+I, [2016-05-22T02:28:28.105571 #25816]  INFO -- web-app-1-centos-66: 	--with-make-prog
+I, [2016-05-22T02:28:28.105612 #25816]  INFO -- web-app-1-centos-66: 	--without-make-prog
+I, [2016-05-22T02:28:28.105670 #25816]  INFO -- web-app-1-centos-66: 	--srcdir=.
+I, [2016-05-22T02:28:28.105717 #25816]  INFO -- web-app-1-centos-66: 	--curdir
+I, [2016-05-22T02:28:28.105757 #25816]  INFO -- web-app-1-centos-66: 	--ruby=/opt/chef/embedded/bin/ruby
+I, [2016-05-22T02:28:28.105796 #25816]  INFO -- web-app-1-centos-66: 	--with-puma_http11-dir
+I, [2016-05-22T02:28:28.105836 #25816]  INFO -- web-app-1-centos-66: 	--without-puma_http11-dir
+I, [2016-05-22T02:28:28.105875 #25816]  INFO -- web-app-1-centos-66: 	--with-puma_http11-include
+I, [2016-05-22T02:28:28.105915 #25816]  INFO -- web-app-1-centos-66: 	--without-puma_http11-include=${puma_http11-dir}/include
+I, [2016-05-22T02:28:28.105956 #25816]  INFO -- web-app-1-centos-66: 	--with-puma_http11-lib
+I, [2016-05-22T02:28:28.105996 #25816]  INFO -- web-app-1-centos-66: 	--without-puma_http11-lib=${puma_http11-dir}/lib
+I, [2016-05-22T02:28:28.106037 #25816]  INFO -- web-app-1-centos-66: 	--with-cryptolib
+I, [2016-05-22T02:28:28.106077 #25816]  INFO -- web-app-1-centos-66: 	--without-cryptolib
+I, [2016-05-22T02:28:28.106117 #25816]  INFO -- web-app-1-centos-66: /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:467:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+I, [2016-05-22T02:28:28.106158 #25816]  INFO -- web-app-1-centos-66: You have to install development tools first.
+I, [2016-05-22T02:28:28.106199 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:552:in `try_link0'
+I, [2016-05-22T02:28:28.106239 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:567:in `try_link'
+I, [2016-05-22T02:28:28.106313 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:747:in `try_func'
+I, [2016-05-22T02:28:28.106358 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:978:in `block in have_library'
+I, [2016-05-22T02:28:28.106399 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:923:in `block in checking_for'
+I, [2016-05-22T02:28:28.106440 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block (2 levels) in postpone'
+I, [2016-05-22T02:28:28.106481 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:28:28.106522 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block in postpone'
+I, [2016-05-22T02:28:28.106562 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:28:28.106603 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:347:in `postpone'
+I, [2016-05-22T02:28:28.106665 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:922:in `checking_for'
+I, [2016-05-22T02:28:28.106715 #25816]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:973:in `have_library'
+I, [2016-05-22T02:28:28.106776 #25816]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `block in <main>'
+I, [2016-05-22T02:28:28.106851 #25816]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `each'
+I, [2016-05-22T02:28:28.106897 #25816]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `find'
+I, [2016-05-22T02:28:28.106944 #25816]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `<main>'
+I, [2016-05-22T02:28:28.106985 #25816]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:28:28.107025 #25816]  INFO -- web-app-1-centos-66: To see why this extension failed to compile, please check the mkmf.log which can be found here:
+I, [2016-05-22T02:28:28.107065 #25816]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:28:28.107104 #25816]  INFO -- web-app-1-centos-66:   /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/mkmf.log
+I, [2016-05-22T02:28:28.107144 #25816]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:28:28.107183 #25816]  INFO -- web-app-1-centos-66: extconf failed, exit code 1
+I, [2016-05-22T02:28:28.107222 #25816]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:28:28.107261 #25816]  INFO -- web-app-1-centos-66: Gem files will remain installed in
+I, [2016-05-22T02:28:28.109486 #25816]  INFO -- web-app-1-centos-66:  /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0 for inspection.
+I, [2016-05-22T02:28:28.109556 #25816]  INFO -- web-app-1-centos-66: Results logged to /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/gem_make.out
+I, [2016-05-22T02:28:28.109602 #25816]  INFO -- web-app-1-centos-66: ---- End output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:28:28.109666 #25816]  INFO -- web-app-1-centos-66: Ran /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" returned 1
+I, [2016-05-22T02:28:28.179327 #25816]  INFO -- web-app-1-centos-66: [2016-05-22T07:28:28+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2016-05-22T02:28:28.308437 #25816] ERROR -- web-app-1-centos-66: Converge failed on instance <web-app-1-centos-66>.
+E, [2016-05-22T02:28:28.308624 #25816] ERROR -- web-app-1-centos-66: ------Exception-------
+E, [2016-05-22T02:28:28.308701 #25816] ERROR -- web-app-1-centos-66: Class: Kitchen::ActionFailed
+E, [2016-05-22T02:28:28.308745 #25816] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-22T02:28:28.308784 #25816] ERROR -- web-app-1-centos-66: ---Nested Exception---
+E, [2016-05-22T02:28:28.308820 #25816] ERROR -- web-app-1-centos-66: Class: Kitchen::SSHFailed
+E, [2016-05-22T02:28:28.308857 #25816] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-22T02:28:28.308894 #25816] ERROR -- web-app-1-centos-66: ------Backtrace-------
+E, [2016-05-22T02:28:28.308965 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:112:in `rescue in run_remote'
+E, [2016-05-22T02:28:28.309007 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:108:in `run_remote'
+E, [2016-05-22T02:28:28.309045 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:48:in `block in converge'
+E, [2016-05-22T02:28:28.309083 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/ssh.rb:47:in `initialize'
+E, [2016-05-22T02:28:28.309120 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `new'
+E, [2016-05-22T02:28:28.309198 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `converge'
+E, [2016-05-22T02:28:28.309244 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2016-05-22T02:28:28.309282 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2016-05-22T02:28:28.309319 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2016-05-22T02:28:28.309356 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2016-05-22T02:28:28.309392 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2016-05-22T02:28:28.309429 #25816] ERROR -- web-app-1-centos-66: /usr/local/rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-05-22T02:28:28.309466 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2016-05-22T02:28:28.309503 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2016-05-22T02:28:28.309540 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+E, [2016-05-22T02:28:28.309577 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2016-05-22T02:28:28.309614 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2016-05-22T02:28:28.309674 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2016-05-22T02:28:28.309718 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:119:in `converge'
+E, [2016-05-22T02:28:28.309756 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+E, [2016-05-22T02:28:28.309794 #25816] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2016-05-22T02:28:28.309831 #25816] ERROR -- web-app-1-centos-66: ----------------------
+I, [2016-05-22T02:40:13.339322 #26782]  INFO -- web-app-1-centos-66: -----> Destroying <web-app-1-centos-66>...
+I, [2016-05-22T02:40:13.426149 #26782]  INFO -- web-app-1-centos-66: UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+I, [2016-05-22T02:40:13.426248 #26782]  INFO -- web-app-1-centos-66: root                26474               9973                0                   May20               ?                   00:00:00            /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid
+I, [2016-05-22T02:40:13.743102 #26782]  INFO -- web-app-1-centos-66: 42092ef2b4760c31b6a9325ac0f18f883b78d50347ae255488131e3863b57233
+I, [2016-05-22T02:40:14.954858 #26782]  INFO -- web-app-1-centos-66: 42092ef2b4760c31b6a9325ac0f18f883b78d50347ae255488131e3863b57233
+I, [2016-05-22T02:40:14.968018 #26782]  INFO -- web-app-1-centos-66: Finished destroying <web-app-1-centos-66> (0m1.63s).
+I, [2016-05-22T02:40:42.350279 #26863]  INFO -- web-app-1-centos-66: -----> Creating <web-app-1-centos-66>...
+I, [2016-05-22T02:40:42.379506 #26863]  INFO -- web-app-1-centos-66: Sending build context to Docker daemon  2.56 kB
+I, [2016-05-22T02:40:42.379690 #26863]  INFO -- web-app-1-centos-66: Sending build context to Docker daemon 
+I, [2016-05-22T02:40:42.411365 #26863]  INFO -- web-app-1-centos-66: Step 0 : FROM centos:centos6
+I, [2016-05-22T02:40:42.553093 #26863]  INFO -- web-app-1-centos-66:  ---> 6e93f19d1d37
+I, [2016-05-22T02:40:42.553164 #26863]  INFO -- web-app-1-centos-66: Step 1 : RUN yum clean all
+I, [2016-05-22T02:40:43.300971 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.301120 #26863]  INFO -- web-app-1-centos-66:  ---> 65558ce850f0
+I, [2016-05-22T02:40:43.301169 #26863]  INFO -- web-app-1-centos-66: Step 2 : RUN yum install -y sudo openssh-server openssh-clients which curl
+I, [2016-05-22T02:40:43.403861 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.403925 #26863]  INFO -- web-app-1-centos-66:  ---> 062964ef071a
+I, [2016-05-22T02:40:43.403994 #26863]  INFO -- web-app-1-centos-66: Step 3 : RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
+I, [2016-05-22T02:40:43.491090 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.491159 #26863]  INFO -- web-app-1-centos-66:  ---> 583e6fa26ea8
+I, [2016-05-22T02:40:43.491227 #26863]  INFO -- web-app-1-centos-66: Step 4 : RUN ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N ''
+I, [2016-05-22T02:40:43.580241 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.580384 #26863]  INFO -- web-app-1-centos-66:  ---> 73bdb83aed40
+I, [2016-05-22T02:40:43.580454 #26863]  INFO -- web-app-1-centos-66: Step 5 : RUN if ! getent passwd kitchen; then useradd -d /home/kitchen -m -s /bin/bash kitchen; fi
+I, [2016-05-22T02:40:43.674392 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.674462 #26863]  INFO -- web-app-1-centos-66:  ---> 6311752ba3f3
+I, [2016-05-22T02:40:43.674538 #26863]  INFO -- web-app-1-centos-66: Step 6 : RUN echo kitchen:kitchen | chpasswd
+I, [2016-05-22T02:40:43.759282 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.759354 #26863]  INFO -- web-app-1-centos-66:  ---> daa776b4e061
+I, [2016-05-22T02:40:43.759424 #26863]  INFO -- web-app-1-centos-66: Step 7 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+I, [2016-05-22T02:40:43.853938 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.854011 #26863]  INFO -- web-app-1-centos-66:  ---> a99ae52237cd
+I, [2016-05-22T02:40:43.854081 #26863]  INFO -- web-app-1-centos-66: Step 8 : RUN mkdir -p /etc/sudoers.d
+I, [2016-05-22T02:40:43.940459 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:43.940553 #26863]  INFO -- web-app-1-centos-66:  ---> 4c066b418b9d
+I, [2016-05-22T02:40:43.940603 #26863]  INFO -- web-app-1-centos-66: Step 9 : RUN echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/kitchen
+I, [2016-05-22T02:40:44.041846 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:44.041956 #26863]  INFO -- web-app-1-centos-66:  ---> 0f6e46b502b1
+I, [2016-05-22T02:40:44.042006 #26863]  INFO -- web-app-1-centos-66: Step 10 : RUN chmod 0440 /etc/sudoers.d/kitchen
+I, [2016-05-22T02:40:44.122941 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:44.123062 #26863]  INFO -- web-app-1-centos-66:  ---> 61b1ad6dcf51
+I, [2016-05-22T02:40:44.123138 #26863]  INFO -- web-app-1-centos-66: Step 11 : RUN echo 'root:ibm4ever' | chpasswd
+I, [2016-05-22T02:40:44.208568 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:44.208701 #26863]  INFO -- web-app-1-centos-66:  ---> ff8273db35c8
+I, [2016-05-22T02:40:44.208751 #26863]  INFO -- web-app-1-centos-66: Step 12 : RUN mkdir /root/.ssh
+I, [2016-05-22T02:40:44.301781 #26863]  INFO -- web-app-1-centos-66:  ---> Using cache
+I, [2016-05-22T02:40:44.301908 #26863]  INFO -- web-app-1-centos-66:  ---> 724e256fec79
+I, [2016-05-22T02:40:44.301955 #26863]  INFO -- web-app-1-centos-66: Successfully built 724e256fec79
+I, [2016-05-22T02:40:44.892835 #26863]  INFO -- web-app-1-centos-66: f4e4140b85e11b2ba39ed8201622ab8b6b6436121f81bec07bf5c4a6bf0051a7
+I, [2016-05-22T02:40:45.294430 #26863]  INFO -- web-app-1-centos-66: Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+I, [2016-05-22T02:40:45.330304 #26863]  INFO -- web-app-1-centos-66: 0.0.0.0:32769
+I, [2016-05-22T02:40:45.345079 #26863]  INFO -- web-app-1-centos-66: Finished creating <web-app-1-centos-66> (0m2.99s).
+I, [2016-05-22T02:41:11.718545 #26955]  INFO -- web-app-1-centos-66: -----> Converging <web-app-1-centos-66>...
+I, [2016-05-22T02:41:11.719292 #26955]  INFO -- web-app-1-centos-66: Preparing files for transfer
+I, [2016-05-22T02:41:11.719686 #26955]  INFO -- web-app-1-centos-66: Resolving cookbook dependencies with Berkshelf 4.2.0...
+I, [2016-05-22T02:41:19.836901 #26955]  INFO -- web-app-1-centos-66: Removing non-cookbook files before transfer
+I, [2016-05-22T02:41:20.481459 #26955]  INFO -- web-app-1-centos-66: -----> Installing Chef Omnibus (true)
+I, [2016-05-22T02:41:20.481610 #26955]  INFO -- web-app-1-centos-66: downloading https://www.getchef.com/chef/install.sh
+I, [2016-05-22T02:41:20.481688 #26955]  INFO -- web-app-1-centos-66:   to file /tmp/install.sh
+I, [2016-05-22T02:41:20.482259 #26955]  INFO -- web-app-1-centos-66: trying curl...
+I, [2016-05-22T02:41:21.080445 #26955]  INFO -- web-app-1-centos-66:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+I, [2016-05-22T02:41:21.080615 #26955]  INFO -- web-app-1-centos-66:                           Dload  Upload   Total   Spent    Left  Speed
+I, [2016-05-22T02:41:21.080698 #26955]  INFO -- web-app-1-centos-66:   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 11 19602   11  2280    0     0   3200      0  0:00:06 --:--:--  0:00:06  7835I, [2016-05-22T02:41:21.392685 #26955]  INFO -- web-app-1-centos-66: 100 19602  100 19602    0     0  26764      0 --:--:-- --:--:-- --:--:-- 63028
+I, [2016-05-22T02:41:21.664336 #26955]  INFO -- web-app-1-centos-66: el 6 x86_64
+I, [2016-05-22T02:41:21.664442 #26955]  INFO -- web-app-1-centos-66: Getting information for chef stable  for el...
+I, [2016-05-22T02:41:21.664488 #26955]  INFO -- web-app-1-centos-66: downloading https://omnitruck-direct.chef.io/stable/chef/metadata?v=&p=el&pv=6&m=x86_64
+I, [2016-05-22T02:41:21.664531 #26955]  INFO -- web-app-1-centos-66:   to file /tmp/install.sh.14/metadata.txt
+I, [2016-05-22T02:41:21.665145 #26955]  INFO -- web-app-1-centos-66: trying curl...
+I, [2016-05-22T02:41:22.016383 #26955]  INFO -- web-app-1-centos-66: sha1	faec4e0bc2cc236170b400426cd3b51b5657fe90
+I, [2016-05-22T02:41:22.016503 #26955]  INFO -- web-app-1-centos-66: sha256	445b64e38827d8c787267bda57d2cd6be797b6f6f70eb34ec846eceee8f6fae9
+I, [2016-05-22T02:41:22.016553 #26955]  INFO -- web-app-1-centos-66: url	https://packages.chef.io/stable/el/6/chef-12.10.24-1.el6.x86_64.rpm
+I, [2016-05-22T02:41:22.016596 #26955]  INFO -- web-app-1-centos-66: version	12.10.24
+I, [2016-05-22T02:41:22.017232 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:22.018728 #26955]  INFO -- web-app-1-centos-66: downloaded metadata file looks valid...
+I, [2016-05-22T02:41:22.030514 #26955]  INFO -- web-app-1-centos-66: downloading https://packages.chef.io/stable/el/6/chef-12.10.24-1.el6.x86_64.rpm
+I, [2016-05-22T02:41:22.030616 #26955]  INFO -- web-app-1-centos-66:   to file /tmp/install.sh.14/chef-12.10.24-1.el6.x86_64.rpm
+I, [2016-05-22T02:41:22.031628 #26955]  INFO -- web-app-1-centos-66: trying curl...
+I, [2016-05-22T02:41:23.656012 #26955]  INFO -- web-app-1-centos-66: Comparing checksum with sha256sum...
+I, [2016-05-22T02:41:24.252324 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:24.252466 #26955]  INFO -- web-app-1-centos-66: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-05-22T02:41:24.252515 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:24.252557 #26955]  INFO -- web-app-1-centos-66: You are installing an omnibus package without a version pin.  If you are installing
+I, [2016-05-22T02:41:24.252597 #26955]  INFO -- web-app-1-centos-66: on production servers via an automated process this is DANGEROUS and you will
+I, [2016-05-22T02:41:24.252636 #26955]  INFO -- web-app-1-centos-66: be upgraded without warning on new releases, even to new major releases.
+I, [2016-05-22T02:41:24.252712 #26955]  INFO -- web-app-1-centos-66: Letting the version float is only appropriate in desktop, test, development or
+I, [2016-05-22T02:41:24.252754 #26955]  INFO -- web-app-1-centos-66: CI/CD environments.
+I, [2016-05-22T02:41:24.252793 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:24.252831 #26955]  INFO -- web-app-1-centos-66: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2016-05-22T02:41:24.252869 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:24.252906 #26955]  INFO -- web-app-1-centos-66: Installing chef 
+I, [2016-05-22T02:41:24.252944 #26955]  INFO -- web-app-1-centos-66: installing with rpm...
+I, [2016-05-22T02:41:24.741379 #26955]  INFO -- web-app-1-centos-66: warning: /tmp/install.sh.14/chef-12.10.24-1.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+Preparing...                                                            (100%)#                                           (100%)##                                          (100%)###                                         (100%)####                                        (100%)#####                                       (100%)######                                      (100%)#######                                     (100%)########                                    (100%)#########                                   (100%)##########                                  (100%)###########                                 (100%)############                                (100%)#############                               (100%)##############                              (100%)###############                             (100%)################                            (100%)#################                           (100%)##################                          (100%)###################                         (100%)####################                        (100%)#####################                       (100%)######################                      (100%)#######################                     (100%)########################                    (100%)#########################                   (100%)##########################                  (100%)###########################                 (100%)############################                (100%)#############################               (100%)##############################              (100%)###############################             (100%)################################            (100%)#################################           (100%)##################################          (100%)###################################         (100%)####################################        (100%)#####################################       (100%)######################################      (100%)#######################################     (100%)########################################    (100%)I, [2016-05-22T02:41:28.233518 #26955]  INFO -- web-app-1-centos-66: #########################################   (100%)##########################################  (100%)########################################### (100%)########################################### [100%]
+   1:chef                                                               (  1%)#                                           (  3%)##                                          (  6%)###                                         (  8%)####                                        ( 10%)#####                                       ( 13%)######                                      ( 15%)#######                                     ( 17%)########                                    ( 19%)#########                                   ( 22%)##########                                  ( 24%)###########                                 ( 26%)############                                ( 28%)#############                               ( 31%)##############                              ( 33%)###############                             ( 35%)################                            ( 38%)#################                           ( 40%)##################                          ( 42%)###################                         ( 44%)####################                        ( 47%)#####################                       ( 49%)######################                      ( 51%)#######################                     ( 53%)########################                    ( 56%)#########################                   ( 58%)##########################                  ( 60%)###########################                 ( 63%)############################                ( 65%)#############################               ( 67%)##############################              ( 69%)###############################             ( 72%)################################            ( 74%)#################################           ( 76%)##################################          ( 78%)###################################         ( 81%)####################################        ( 83%)#####################################       ( 85%)######################################      ( 88%)#######################################     ( 90%)########################################    ( 92%)#########################################   ( 94%)##########################################  ( 97%)I, [2016-05-22T02:41:31.735377 #26955]  INFO -- web-app-1-centos-66: ########################################### ( 99%)########################################### [100%]
+I, [2016-05-22T02:41:33.732864 #26955]  INFO -- web-app-1-centos-66: Thank you for installing Chef!
+I, [2016-05-22T02:41:33.778225 #26955]  INFO -- web-app-1-centos-66: Transfering files to <web-app-1-centos-66>
+I, [2016-05-22T02:41:36.829356 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:36+00:00] INFO: Forking chef instance to converge...
+I, [2016-05-22T02:41:38.846255 #26955]  INFO -- web-app-1-centos-66: Starting Chef Client, version 12.10.24[0m
+I, [2016-05-22T02:41:38.846382 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:38+00:00] INFO: *** Chef 12.10.24 ***
+I, [2016-05-22T02:41:38.846431 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:38+00:00] INFO: Platform: x86_64-linux
+I, [2016-05-22T02:41:38.846522 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:38+00:00] INFO: Chef-client pid: 111
+I, [2016-05-22T02:41:41.903341 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: Setting the run_list to ["recipe[web-app]"] from CLI options
+I, [2016-05-22T02:41:41.910039 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: Run List is [recipe[web-app]]
+I, [2016-05-22T02:41:41.910109 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: Run List expands to [web-app]
+I, [2016-05-22T02:41:41.910193 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: Starting Chef Run for web-app-1-centos-66
+I, [2016-05-22T02:41:41.910243 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: Running start handlers
+I, [2016-05-22T02:41:41.910286 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: Start handlers complete.
+I, [2016-05-22T02:41:41.945056 #26955]  INFO -- web-app-1-centos-66: Installing Cookbook Gems:[0m
+I, [2016-05-22T02:41:41.945129 #26955]  INFO -- web-app-1-centos-66: Compiling Cookbooks...[0m
+I, [2016-05-22T02:41:41.951017 #26955]  INFO -- web-app-1-centos-66: Converging 5 resources[0m
+I, [2016-05-22T02:41:41.951083 #26955]  INFO -- web-app-1-centos-66: Recipe: web-app::default[0m
+I, [2016-05-22T02:41:41.955625 #26955]  INFO -- web-app-1-centos-66:   * directory[/opt/web-app] action create[2016-05-22T07:41:41+00:00] INFO: Processing directory[/opt/web-app] action create (web-app::default line 14)
+I, [2016-05-22T02:41:41.955742 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: directory[/opt/web-app] created directory /opt/web-app
+I, [2016-05-22T02:41:41.955792 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:41.955834 #26955]  INFO -- web-app-1-centos-66:     [32m- create new directory /opt/web-app[0m
+I, [2016-05-22T02:41:41.956088 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:41+00:00] INFO: directory[/opt/web-app] mode changed to 755
+I, [2016-05-22T02:41:41.956145 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:41.956188 #26955]  INFO -- web-app-1-centos-66:     [32m- change mode from '' to '0755'[0m
+I, [2016-05-22T02:41:42.733053 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:42.733175 #26955]  INFO -- web-app-1-centos-66: [0m  * gem_package[sinatra] action install[2016-05-22T07:41:42+00:00] INFO: Processing gem_package[sinatra] action install (web-app::default line 21)
+I, [2016-05-22T02:41:46.934368 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:46+00:00] INFO: gem_package[sinatra] installed sinatra at 1.4.7
+I, [2016-05-22T02:41:46.934497 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:46.934547 #26955]  INFO -- web-app-1-centos-66:     [32m- install version 1.4.7 of package sinatra[0m
+I, [2016-05-22T02:41:46.934591 #26955]  INFO -- web-app-1-centos-66: [0m  * gem_package[puma] action install[2016-05-22T07:41:46+00:00] INFO: Processing gem_package[puma] action install (web-app::default line 21)
+I, [2016-05-22T02:41:48.985513 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:48.985705 #26955]  INFO -- web-app-1-centos-66:     [0m
+I, [2016-05-22T02:41:48.985770 #26955]  INFO -- web-app-1-centos-66:     ================================================================================[0m
+I, [2016-05-22T02:41:48.985815 #26955]  INFO -- web-app-1-centos-66:     [31mError executing action `install` on resource 'gem_package[puma]'[0m
+I, [2016-05-22T02:41:48.985856 #26955]  INFO -- web-app-1-centos-66:     ================================================================================[0m
+I, [2016-05-22T02:41:48.985896 #26955]  INFO -- web-app-1-centos-66:     
+I, [2016-05-22T02:41:48.985935 #26955]  INFO -- web-app-1-centos-66: [0m    Mixlib::ShellOut::ShellCommandFailed[0m
+I, [2016-05-22T02:41:48.985975 #26955]  INFO -- web-app-1-centos-66:     ------------------------------------[0m
+I, [2016-05-22T02:41:48.986013 #26955]  INFO -- web-app-1-centos-66:     Expected process to exit with [0], but received '1'
+I, [2016-05-22T02:41:48.986053 #26955]  INFO -- web-app-1-centos-66: [0m    ---- Begin output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:41:48.986098 #26955]  INFO -- web-app-1-centos-66: [0m    STDOUT: Building native extensions.  This could take a while...
+I, [2016-05-22T02:41:48.986139 #26955]  INFO -- web-app-1-centos-66: [0m    STDERR: ERROR:  Error installing puma:
+I, [2016-05-22T02:41:48.986178 #26955]  INFO -- web-app-1-centos-66: [0m    	ERROR: Failed to build gem native extension.
+I, [2016-05-22T02:41:48.986250 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.986297 #26955]  INFO -- web-app-1-centos-66: [0m        current directory: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0/ext/puma_http11
+I, [2016-05-22T02:41:48.986339 #26955]  INFO -- web-app-1-centos-66: [0m    /opt/chef/embedded/bin/ruby -r ./siteconf20160522-305-7t3erw.rb extconf.rb
+I, [2016-05-22T02:41:48.986379 #26955]  INFO -- web-app-1-centos-66: [0m    checking for BIO_read() in -lcrypto... *** extconf.rb failed ***
+I, [2016-05-22T02:41:48.986419 #26955]  INFO -- web-app-1-centos-66: [0m    Could not create Makefile due to some reason, probably lack of necessary
+I, [2016-05-22T02:41:48.986459 #26955]  INFO -- web-app-1-centos-66: [0m    libraries and/or headers.  Check the mkmf.log file for more details.  You may
+I, [2016-05-22T02:41:48.986499 #26955]  INFO -- web-app-1-centos-66: [0m    need configuration options.
+I, [2016-05-22T02:41:48.986538 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.986577 #26955]  INFO -- web-app-1-centos-66: [0m    Provided configuration options:
+I, [2016-05-22T02:41:48.986616 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-opt-dir
+I, [2016-05-22T02:41:48.986684 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-opt-include
+I, [2016-05-22T02:41:48.986730 #26955]  INFO -- web-app-1-centos-66: [0m    	--without-opt-include=${opt-dir}/include
+I, [2016-05-22T02:41:48.986814 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-opt-lib
+I, [2016-05-22T02:41:48.986857 #26955]  INFO -- web-app-1-centos-66: [0m    	--without-opt-lib=${opt-dir}/lib
+I, [2016-05-22T02:41:48.986896 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-make-prog
+I, [2016-05-22T02:41:48.986935 #26955]  INFO -- web-app-1-centos-66: [0m    	--without-make-prog
+I, [2016-05-22T02:41:48.986974 #26955]  INFO -- web-app-1-centos-66: [0m    	--srcdir=.
+I, [2016-05-22T02:41:48.987012 #26955]  INFO -- web-app-1-centos-66: [0m    	--curdir
+I, [2016-05-22T02:41:48.987051 #26955]  INFO -- web-app-1-centos-66: [0m    	--ruby=/opt/chef/embedded/bin/ruby
+I, [2016-05-22T02:41:48.987089 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-dir
+I, [2016-05-22T02:41:48.987128 #26955]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-dir
+I, [2016-05-22T02:41:48.987167 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-include
+I, [2016-05-22T02:41:48.987206 #26955]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-include=${puma_http11-dir}/include
+I, [2016-05-22T02:41:48.987245 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-puma_http11-lib
+I, [2016-05-22T02:41:48.987284 #26955]  INFO -- web-app-1-centos-66: [0m    	--without-puma_http11-lib=${puma_http11-dir}/lib
+I, [2016-05-22T02:41:48.987324 #26955]  INFO -- web-app-1-centos-66: [0m    	--with-cryptolib
+I, [2016-05-22T02:41:48.987362 #26955]  INFO -- web-app-1-centos-66: [0m    	--without-cryptolib
+I, [2016-05-22T02:41:48.987401 #26955]  INFO -- web-app-1-centos-66: [0m    /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:467:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+I, [2016-05-22T02:41:48.987440 #26955]  INFO -- web-app-1-centos-66: [0m    You have to install development tools first.
+I, [2016-05-22T02:41:48.987480 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:552:in `try_link0'
+I, [2016-05-22T02:41:48.987519 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:567:in `try_link'
+I, [2016-05-22T02:41:48.987559 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:747:in `try_func'
+I, [2016-05-22T02:41:48.987598 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:978:in `block in have_library'
+I, [2016-05-22T02:41:48.987638 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:923:in `block in checking_for'
+I, [2016-05-22T02:41:48.987720 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block (2 levels) in postpone'
+I, [2016-05-22T02:41:48.987806 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:41:48.987849 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block in postpone'
+I, [2016-05-22T02:41:48.987889 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:41:48.987929 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:347:in `postpone'
+I, [2016-05-22T02:41:48.987969 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:922:in `checking_for'
+I, [2016-05-22T02:41:48.988009 #26955]  INFO -- web-app-1-centos-66: [0m    	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:973:in `have_library'
+I, [2016-05-22T02:41:48.988047 #26955]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `block in <main>'
+I, [2016-05-22T02:41:48.988086 #26955]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `each'
+I, [2016-05-22T02:41:48.988125 #26955]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `find'
+I, [2016-05-22T02:41:48.988163 #26955]  INFO -- web-app-1-centos-66: [0m    	from extconf.rb:6:in `<main>'
+I, [2016-05-22T02:41:48.988202 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.988241 #26955]  INFO -- web-app-1-centos-66: [0m    To see why this extension failed to compile, please check the mkmf.log which can be found here:
+I, [2016-05-22T02:41:48.988281 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.988320 #26955]  INFO -- web-app-1-centos-66: [0m      /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/mkmf.log
+I, [2016-05-22T02:41:48.988360 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.988398 #26955]  INFO -- web-app-1-centos-66: [0m    extconf failed, exit code 1
+I, [2016-05-22T02:41:48.988436 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.988476 #26955]  INFO -- web-app-1-centos-66: [0m    Gem files will remain installed in /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0 for inspection.
+I, [2016-05-22T02:41:48.988516 #26955]  INFO -- web-app-1-centos-66: [0m    Results logged to /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/gem_make.out
+I, [2016-05-22T02:41:48.988557 #26955]  INFO -- web-app-1-centos-66: [0m    ---- End output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:41:48.988597 #26955]  INFO -- web-app-1-centos-66: [0m    Ran /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" returned 1[0m
+I, [2016-05-22T02:41:48.988637 #26955]  INFO -- web-app-1-centos-66:     
+I, [2016-05-22T02:41:48.988701 #26955]  INFO -- web-app-1-centos-66: [0m    Resource Declaration:[0m
+I, [2016-05-22T02:41:48.988784 #26955]  INFO -- web-app-1-centos-66:     ---------------------[0m
+I, [2016-05-22T02:41:48.988827 #26955]  INFO -- web-app-1-centos-66:     # In /tmp/kitchen/cookbooks/web-app/recipes/default.rb
+I, [2016-05-22T02:41:48.988888 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.988929 #26955]  INFO -- web-app-1-centos-66: [0m     21:  gem_package "#{p}" do
+I, [2016-05-22T02:41:48.988967 #26955]  INFO -- web-app-1-centos-66: [0m  
+I, [2016-05-22T02:41:48.990589 #26955]  INFO -- web-app-1-centos-66:    22:   gem_binary "#{chef_path}/gem"
+I, [2016-05-22T02:41:48.990681 #26955]  INFO -- web-app-1-centos-66: [0m     23:   action :install
+I, [2016-05-22T02:41:48.990728 #26955]  INFO -- web-app-1-centos-66: [0m     24:  end
+I, [2016-05-22T02:41:48.990769 #26955]  INFO -- web-app-1-centos-66: [0m     25: end
+I, [2016-05-22T02:41:48.990829 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.990873 #26955]  INFO -- web-app-1-centos-66: [0m    Compiled Resource:[0m
+I, [2016-05-22T02:41:48.990949 #26955]  INFO -- web-app-1-centos-66:     ------------------[0m
+I, [2016-05-22T02:41:48.990992 #26955]  INFO -- web-app-1-centos-66:     # Declared in /tmp/kitchen/cookbooks/web-app/recipes/default.rb:21:in `block in from_file'
+I, [2016-05-22T02:41:48.991033 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.991073 #26955]  INFO -- web-app-1-centos-66: [0m    gem_package("puma") do
+I, [2016-05-22T02:41:48.991113 #26955]  INFO -- web-app-1-centos-66: [0m      package_name "puma"
+I, [2016-05-22T02:41:48.991153 #26955]  INFO -- web-app-1-centos-66: [0m      action [:install]
+I, [2016-05-22T02:41:48.991192 #26955]  INFO -- web-app-1-centos-66: [0m      retries 0
+I, [2016-05-22T02:41:48.991231 #26955]  INFO -- web-app-1-centos-66: [0m      retry_delay 2
+I, [2016-05-22T02:41:48.991269 #26955]  INFO -- web-app-1-centos-66: [0m      default_guard_interpreter :default
+I, [2016-05-22T02:41:48.991308 #26955]  INFO -- web-app-1-centos-66: [0m      declared_type :gem_package
+I, [2016-05-22T02:41:48.991347 #26955]  INFO -- web-app-1-centos-66: [0m      cookbook_name :"web-app"
+I, [2016-05-22T02:41:48.991385 #26955]  INFO -- web-app-1-centos-66: [0m      recipe_name "default"
+I, [2016-05-22T02:41:48.991424 #26955]  INFO -- web-app-1-centos-66: [0m      gem_binary "/opt/chef/embedded/bin/gem"
+I, [2016-05-22T02:41:48.991464 #26955]  INFO -- web-app-1-centos-66: [0m    end
+I, [2016-05-22T02:41:48.991503 #26955]  INFO -- web-app-1-centos-66: [0m    
+I, [2016-05-22T02:41:48.991543 #26955]  INFO -- web-app-1-centos-66: [0m    Platform:[0m
+I, [2016-05-22T02:41:48.991582 #26955]  INFO -- web-app-1-centos-66:     ---------[0m
+I, [2016-05-22T02:41:48.991622 #26955]  INFO -- web-app-1-centos-66:     x86_64-linux[0m
+I, [2016-05-22T02:41:48.991684 #26955]  INFO -- web-app-1-centos-66:     
+I, [2016-05-22T02:41:48.991727 #26955]  INFO -- web-app-1-centos-66: [0m
+I, [2016-05-22T02:41:48.992935 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:48+00:00] INFO: Running queued delayed notifications before re-raising exception
+I, [2016-05-22T02:41:48.993011 #26955]  INFO -- web-app-1-centos-66: [0m
+I, [2016-05-22T02:41:48.993055 #26955]  INFO -- web-app-1-centos-66: Running handlers:[0m
+I, [2016-05-22T02:41:48.993115 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:48+00:00] ERROR: Running exception handlers
+I, [2016-05-22T02:41:48.993158 #26955]  INFO -- web-app-1-centos-66: Running handlers complete
+I, [2016-05-22T02:41:48.993198 #26955]  INFO -- web-app-1-centos-66: [0m[2016-05-22T07:41:48+00:00] ERROR: Exception handlers complete
+I, [2016-05-22T02:41:48.993237 #26955]  INFO -- web-app-1-centos-66: Chef Client failed. 2 resources updated in 12 seconds[0m
+I, [2016-05-22T02:41:48.993277 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:48+00:00] FATAL: Stacktrace dumped to /tmp/kitchen/cache/chef-stacktrace.out
+I, [2016-05-22T02:41:48.993317 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:48+00:00] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+I, [2016-05-22T02:41:48.993357 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:48+00:00] ERROR: gem_package[puma] (web-app::default line 21) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '1'
+I, [2016-05-22T02:41:48.993398 #26955]  INFO -- web-app-1-centos-66: ---- Begin output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:41:48.993438 #26955]  INFO -- web-app-1-centos-66: STDOUT: Building native extensions.  This could take a while...
+I, [2016-05-22T02:41:48.993478 #26955]  INFO -- web-app-1-centos-66: STDERR: ERROR:  Error installing puma:
+I, [2016-05-22T02:41:48.993517 #26955]  INFO -- web-app-1-centos-66: 	ERROR: Failed to build gem native extension.
+I, [2016-05-22T02:41:48.993576 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:48.993620 #26955]  INFO -- web-app-1-centos-66:     current directory: /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0/ext/puma_http11
+I, [2016-05-22T02:41:48.993687 #26955]  INFO -- web-app-1-centos-66: /opt/chef/embedded/bin/ruby -r ./siteconf20160522-305-7t3erw.rb extconf.rb
+I, [2016-05-22T02:41:48.993733 #26955]  INFO -- web-app-1-centos-66: checking for BIO_read() in -lcrypto... *** extconf.rb failed ***
+I, [2016-05-22T02:41:48.993772 #26955]  INFO -- web-app-1-centos-66: Could not create Makefile due to some reason, probably lack of necessary
+I, [2016-05-22T02:41:48.993811 #26955]  INFO -- web-app-1-centos-66: libraries and/or headers.  Check the mkmf.log file for more details.  You may
+I, [2016-05-22T02:41:48.993851 #26955]  INFO -- web-app-1-centos-66: need configuration options.
+I, [2016-05-22T02:41:48.993889 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:48.993928 #26955]  INFO -- web-app-1-centos-66: Provided configuration options:
+I, [2016-05-22T02:41:48.994001 #26955]  INFO -- web-app-1-centos-66: 	--with-opt-dir
+I, [2016-05-22T02:41:48.994043 #26955]  INFO -- web-app-1-centos-66: 	--with-opt-include
+I, [2016-05-22T02:41:48.994082 #26955]  INFO -- web-app-1-centos-66: 	--without-opt-include=${opt-dir}/include
+I, [2016-05-22T02:41:48.994121 #26955]  INFO -- web-app-1-centos-66: 	--with-opt-lib
+I, [2016-05-22T02:41:48.994160 #26955]  INFO -- web-app-1-centos-66: 	--without-opt-lib=${opt-dir}/lib
+I, [2016-05-22T02:41:48.994198 #26955]  INFO -- web-app-1-centos-66: 	--with-make-prog
+I, [2016-05-22T02:41:48.994236 #26955]  INFO -- web-app-1-centos-66: 	--without-make-prog
+I, [2016-05-22T02:41:48.994274 #26955]  INFO -- web-app-1-centos-66: 	--srcdir=.
+I, [2016-05-22T02:41:48.994312 #26955]  INFO -- web-app-1-centos-66: 	--curdir
+I, [2016-05-22T02:41:48.994351 #26955]  INFO -- web-app-1-centos-66: 	--ruby=/opt/chef/embedded/bin/ruby
+I, [2016-05-22T02:41:48.994389 #26955]  INFO -- web-app-1-centos-66: 	--with-puma_http11-dir
+I, [2016-05-22T02:41:48.994427 #26955]  INFO -- web-app-1-centos-66: 	--without-puma_http11-dir
+I, [2016-05-22T02:41:48.994466 #26955]  INFO -- web-app-1-centos-66: 	--with-puma_http11-include
+I, [2016-05-22T02:41:48.994505 #26955]  INFO -- web-app-1-centos-66: 	--without-puma_http11-include=${puma_http11-dir}/include
+I, [2016-05-22T02:41:48.994543 #26955]  INFO -- web-app-1-centos-66: 	--with-puma_http11-lib
+I, [2016-05-22T02:41:48.994582 #26955]  INFO -- web-app-1-centos-66: 	--without-puma_http11-lib=${puma_http11-dir}/lib
+I, [2016-05-22T02:41:48.994620 #26955]  INFO -- web-app-1-centos-66: 	--with-cryptolib
+I, [2016-05-22T02:41:48.994681 #26955]  INFO -- web-app-1-centos-66: 	--without-cryptolib
+I, [2016-05-22T02:41:48.994724 #26955]  INFO -- web-app-1-centos-66: /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:467:in `try_do': The compiler failed to generate an executable file. (RuntimeError)
+I, [2016-05-22T02:41:48.994764 #26955]  INFO -- web-app-1-centos-66: You have to install development tools first.
+I, [2016-05-22T02:41:48.994803 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:552:in `try_link0'
+I, [2016-05-22T02:41:48.994842 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:567:in `try_link'
+I, [2016-05-22T02:41:48.994882 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:747:in `try_func'
+I, [2016-05-22T02:41:48.994958 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:978:in `block in have_library'
+I, [2016-05-22T02:41:48.995000 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:923:in `block in checking_for'
+I, [2016-05-22T02:41:48.995041 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block (2 levels) in postpone'
+I, [2016-05-22T02:41:48.995081 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:41:48.995136 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:351:in `block in postpone'
+I, [2016-05-22T02:41:48.995180 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:321:in `open'
+I, [2016-05-22T02:41:48.995220 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:347:in `postpone'
+I, [2016-05-22T02:41:48.995260 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:922:in `checking_for'
+I, [2016-05-22T02:41:48.995299 #26955]  INFO -- web-app-1-centos-66: 	from /opt/chef/embedded/lib/ruby/2.1.0/mkmf.rb:973:in `have_library'
+I, [2016-05-22T02:41:48.995339 #26955]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `block in <main>'
+I, [2016-05-22T02:41:48.995378 #26955]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `each'
+I, [2016-05-22T02:41:48.995417 #26955]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `find'
+I, [2016-05-22T02:41:48.995456 #26955]  INFO -- web-app-1-centos-66: 	from extconf.rb:6:in `<main>'
+I, [2016-05-22T02:41:48.995494 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:48.995533 #26955]  INFO -- web-app-1-centos-66: To see why this extension failed to compile, please check the mkmf.log which can be found here:
+I, [2016-05-22T02:41:48.995572 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:48.995611 #26955]  INFO -- web-app-1-centos-66:   /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/mkmf.log
+I, [2016-05-22T02:41:48.995668 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:48.995713 #26955]  INFO -- web-app-1-centos-66: extconf failed, exit code 1
+I, [2016-05-22T02:41:48.995753 #26955]  INFO -- web-app-1-centos-66: 
+I, [2016-05-22T02:41:48.995793 #26955]  INFO -- web-app-1-centos-66: Gem files will remain installed in /opt/chef/embedded/lib/ruby/gems/2.1.0/gems/puma-3.4.0 for inspection.
+I, [2016-05-22T02:41:48.995834 #26955]  INFO -- web-app-1-centos-66: Results logged to /opt/chef/embedded/lib/ruby/gems/2.1.0/extensions/x86_64-linux/2.1.0/puma-3.4.0/gem_make.out
+I, [2016-05-22T02:41:48.995874 #26955]  INFO -- web-app-1-centos-66: ---- End output of /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" ----
+I, [2016-05-22T02:41:48.995952 #26955]  INFO -- web-app-1-centos-66: Ran /opt/chef/embedded/bin/gem install puma -q --no-rdoc --no-ri -v "3.4.0" returned 1
+I, [2016-05-22T02:41:49.071326 #26955]  INFO -- web-app-1-centos-66: [2016-05-22T07:41:49+00:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+E, [2016-05-22T02:41:49.218531 #26955] ERROR -- web-app-1-centos-66: Converge failed on instance <web-app-1-centos-66>.
+E, [2016-05-22T02:41:49.218763 #26955] ERROR -- web-app-1-centos-66: ------Exception-------
+E, [2016-05-22T02:41:49.218816 #26955] ERROR -- web-app-1-centos-66: Class: Kitchen::ActionFailed
+E, [2016-05-22T02:41:49.218856 #26955] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-22T02:41:49.218893 #26955] ERROR -- web-app-1-centos-66: ---Nested Exception---
+E, [2016-05-22T02:41:49.218929 #26955] ERROR -- web-app-1-centos-66: Class: Kitchen::SSHFailed
+E, [2016-05-22T02:41:49.218964 #26955] ERROR -- web-app-1-centos-66: Message: SSH exited (1) for command: [sudo -E chef-solo --config /tmp/kitchen/solo.rb --json-attributes /tmp/kitchen/dna.json  --log_level info]
+E, [2016-05-22T02:41:49.218999 #26955] ERROR -- web-app-1-centos-66: ------Backtrace-------
+E, [2016-05-22T02:41:49.219034 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:112:in `rescue in run_remote'
+E, [2016-05-22T02:41:49.219070 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:108:in `run_remote'
+E, [2016-05-22T02:41:49.219166 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:48:in `block in converge'
+E, [2016-05-22T02:41:49.219219 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/ssh.rb:47:in `initialize'
+E, [2016-05-22T02:41:49.219258 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `new'
+E, [2016-05-22T02:41:49.219296 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/ssh_base.rb:43:in `converge'
+E, [2016-05-22T02:41:49.219332 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2016-05-22T02:41:49.219369 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2016-05-22T02:41:49.219405 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2016-05-22T02:41:49.219442 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2016-05-22T02:41:49.219478 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2016-05-22T02:41:49.219514 #26955] ERROR -- web-app-1-centos-66: /usr/local/rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-05-22T02:41:49.219550 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2016-05-22T02:41:49.219585 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2016-05-22T02:41:49.219621 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:256:in `converge_action'
+E, [2016-05-22T02:41:49.219681 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2016-05-22T02:41:49.219722 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2016-05-22T02:41:49.219759 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2016-05-22T02:41:49.219795 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:119:in `converge'
+E, [2016-05-22T02:41:49.219831 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+E, [2016-05-22T02:41:49.219868 #26955] ERROR -- web-app-1-centos-66: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2016-05-22T02:41:49.219904 #26955] ERROR -- web-app-1-centos-66: ----------------------

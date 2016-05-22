@@ -1,0 +1,184 @@
+I, [2016-05-22T09:34:06.709267 #5224]  INFO -- web-app-1-centos7: -----> Creating <web-app-1-centos7>...
+I, [2016-05-22T09:34:06.734136 #5224]  INFO -- web-app-1-centos7: Sending build context to Docker daemon 3.584 kB
+I, [2016-05-22T09:34:06.734221 #5224]  INFO -- web-app-1-centos7: Sending build context to Docker daemon 
+I, [2016-05-22T09:34:06.763084 #5224]  INFO -- web-app-1-centos7: Step 0 : FROM centos:centos7
+I, [2016-05-22T09:34:07.004134 #5224]  INFO -- web-app-1-centos7:  ---> bb3d629a7cbc
+I, [2016-05-22T09:34:07.004230 #5224]  INFO -- web-app-1-centos7: Step 1 : MAINTAINER "Girdhar Katiyar" <egirdhar@gmail.com>
+I, [2016-05-22T09:34:07.134787 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:07.134882 #5224]  INFO -- web-app-1-centos7:  ---> a0fdcbaa4aef
+I, [2016-05-22T09:34:07.134931 #5224]  INFO -- web-app-1-centos7: Step 2 : RUN date > /root/date
+I, [2016-05-22T09:34:07.271844 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:07.271954 #5224]  INFO -- web-app-1-centos7:  ---> dc5f1431e315
+I, [2016-05-22T09:34:07.272015 #5224]  INFO -- web-app-1-centos7: Step 3 : RUN yum install -y git                    libffi-devel                    openssl                    openssl-devel                    pyOpenSSL                    tar                    unzip                    wget 	           openssh-server 	           openssh-clients 		   sudo                    gcc                    ruby-devel 	           which
+I, [2016-05-22T09:34:07.399195 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:07.399344 #5224]  INFO -- web-app-1-centos7:  ---> e2302b32a875
+I, [2016-05-22T09:34:07.399389 #5224]  INFO -- web-app-1-centos7: Step 4 : WORKDIR /tmp
+I, [2016-05-22T09:34:07.532804 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:07.532933 #5224]  INFO -- web-app-1-centos7:  ---> ac9e92f30702
+I, [2016-05-22T09:34:07.532979 #5224]  INFO -- web-app-1-centos7: Step 5 : RUN git config --global user.email "egirdhar@gmail.com"
+I, [2016-05-22T09:34:07.668448 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:07.668572 #5224]  INFO -- web-app-1-centos7:  ---> 604a994245b8
+I, [2016-05-22T09:34:07.668616 #5224]  INFO -- web-app-1-centos7: Step 6 : RUN git config --global user.name "egirdhar"
+I, [2016-05-22T09:34:07.793923 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:07.794046 #5224]  INFO -- web-app-1-centos7:  ---> 9e000f80277e
+I, [2016-05-22T09:34:07.794089 #5224]  INFO -- web-app-1-centos7: Step 7 : WORKDIR /tmp
+I, [2016-05-22T09:34:07.929665 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:07.929818 #5224]  INFO -- web-app-1-centos7:  ---> 057e8ef5aa72
+I, [2016-05-22T09:34:07.929896 #5224]  INFO -- web-app-1-centos7: Step 8 : RUN curl -L https://www.opscode.com/chef/install.sh | bash -s -- -v 12.0
+I, [2016-05-22T09:34:08.052741 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.052855 #5224]  INFO -- web-app-1-centos7:  ---> 05bb109c20b5
+I, [2016-05-22T09:34:08.052900 #5224]  INFO -- web-app-1-centos7: Step 9 : WORKDIR /root
+I, [2016-05-22T09:34:08.186960 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.187084 #5224]  INFO -- web-app-1-centos7:  ---> ed8ab2313e38
+I, [2016-05-22T09:34:08.187129 #5224]  INFO -- web-app-1-centos7: Step 10 : RUN wget http://github.com/opscode/chef-repo/tarball/master
+I, [2016-05-22T09:34:08.327893 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.328019 #5224]  INFO -- web-app-1-centos7:  ---> a8884794605b
+I, [2016-05-22T09:34:08.328068 #5224]  INFO -- web-app-1-centos7: Step 11 : RUN tar -zxvf master
+I, [2016-05-22T09:34:08.451518 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.451674 #5224]  INFO -- web-app-1-centos7:  ---> 5a49fd672d47
+I, [2016-05-22T09:34:08.451750 #5224]  INFO -- web-app-1-centos7: Step 12 : RUN mv chef-chef-repo* chef-repo
+I, [2016-05-22T09:34:08.588635 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.588819 #5224]  INFO -- web-app-1-centos7:  ---> c2a2d8da23a6
+I, [2016-05-22T09:34:08.588868 #5224]  INFO -- web-app-1-centos7: Step 13 : RUN rm -rf master
+I, [2016-05-22T09:34:08.714828 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.714957 #5224]  INFO -- web-app-1-centos7:  ---> 64197339210c
+I, [2016-05-22T09:34:08.715002 #5224]  INFO -- web-app-1-centos7: Step 14 : WORKDIR /root/chef-repo
+I, [2016-05-22T09:34:08.852886 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.853016 #5224]  INFO -- web-app-1-centos7:  ---> 13e5b4b9450a
+I, [2016-05-22T09:34:08.853062 #5224]  INFO -- web-app-1-centos7: Step 15 : RUN git init && git add . && git commit -m 'Initial commit'
+I, [2016-05-22T09:34:08.979674 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:08.979813 #5224]  INFO -- web-app-1-centos7:  ---> a4a8f47e4479
+I, [2016-05-22T09:34:08.979860 #5224]  INFO -- web-app-1-centos7: Step 16 : RUN mkdir .chef
+I, [2016-05-22T09:34:09.114630 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:09.114783 #5224]  INFO -- web-app-1-centos7:  ---> 33024e97efb1
+I, [2016-05-22T09:34:09.114829 #5224]  INFO -- web-app-1-centos7: Step 17 : RUN echo "cookbook_path [ '/root/chef-repo/cookbooks' ]" > .chef/knife.rb
+I, [2016-05-22T09:34:09.253620 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:09.253773 #5224]  INFO -- web-app-1-centos7:  ---> 9024a86f85f3
+I, [2016-05-22T09:34:09.253818 #5224]  INFO -- web-app-1-centos7: Step 18 : VOLUME /var/www/html
+I, [2016-05-22T09:34:09.379733 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:09.379864 #5224]  INFO -- web-app-1-centos7:  ---> aadb1fbd81a3
+I, [2016-05-22T09:34:09.379941 #5224]  INFO -- web-app-1-centos7: Step 19 : EXPOSE 80
+I, [2016-05-22T09:34:09.515510 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:09.515663 #5224]  INFO -- web-app-1-centos7:  ---> a890f3d270e0
+I, [2016-05-22T09:34:09.515711 #5224]  INFO -- web-app-1-centos7: Step 20 : EXPOSE 443
+I, [2016-05-22T09:34:09.640163 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:09.640306 #5224]  INFO -- web-app-1-centos7:  ---> 5639fabf6c3d
+I, [2016-05-22T09:34:09.640352 #5224]  INFO -- web-app-1-centos7: Step 21 : EXPOSE 4567
+I, [2016-05-22T09:34:09.773195 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:09.773322 #5224]  INFO -- web-app-1-centos7:  ---> a99b3a4c8f8f
+I, [2016-05-22T09:34:09.773369 #5224]  INFO -- web-app-1-centos7: Step 22 : RUN useradd -d /home/kitchen -m -s /bin/bash kitchen &&   (echo kitchen:kitchen | chpasswd) &&   mkdir -p /etc/sudoers.d &&   echo 'kitchen ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers.d/kitchen &&   ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key -N '' &&   ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N '' &&   echo 'OPTIONS="-o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes"' >> /etc/sysconfig/sshd
+I, [2016-05-22T09:34:09.909587 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:09.909768 #5224]  INFO -- web-app-1-centos7:  ---> 2ad694dd1261
+I, [2016-05-22T09:34:09.909840 #5224]  INFO -- web-app-1-centos7: Step 23 : CMD /sbin/init
+I, [2016-05-22T09:34:10.034126 #5224]  INFO -- web-app-1-centos7:  ---> Using cache
+I, [2016-05-22T09:34:10.034259 #5224]  INFO -- web-app-1-centos7:  ---> 152d01e167e9
+I, [2016-05-22T09:34:10.034306 #5224]  INFO -- web-app-1-centos7: Successfully built 152d01e167e9
+I, [2016-05-22T09:34:10.118263 #5224]  INFO -- web-app-1-centos7: time="2016-05-22T09:34:10-05:00" level=fatal msg="Error response from daemon: Conflict. The name \"web-app.node-1\" is already in use by container a1976c5e53bb. You have to delete (or rename) that container to be able to reuse that name." 
+E, [2016-05-22T09:34:10.129733 #5224] ERROR -- web-app-1-centos7: Create failed on instance <web-app-1-centos7>.
+E, [2016-05-22T09:34:10.129898 #5224] ERROR -- web-app-1-centos7: ------Exception-------
+E, [2016-05-22T09:34:10.129946 #5224] ERROR -- web-app-1-centos7: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2016-05-22T09:34:10.130002 #5224] ERROR -- web-app-1-centos7: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock run -d -p 22 --name web-app.node-1 -h web-app.node-1 152d01e167e9 /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid ----
+STDOUT: 
+STDERR: time="2016-05-22T09:34:10-05:00" level=fatal msg="Error response from daemon: Conflict. The name \"web-app.node-1\" is already in use by container a1976c5e53bb. You have to delete (or rename) that container to be able to reuse that name."
+---- End output of docker -H unix:///var/run/docker.sock run -d -p 22 --name web-app.node-1 -h web-app.node-1 152d01e167e9 /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid ----
+Ran docker -H unix:///var/run/docker.sock run -d -p 22 --name web-app.node-1 -h web-app.node-1 152d01e167e9 /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid returned 1
+E, [2016-05-22T09:34:10.130058 #5224] ERROR -- web-app-1-centos7: ---Nested Exception---
+E, [2016-05-22T09:34:10.130123 #5224] ERROR -- web-app-1-centos7: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2016-05-22T09:34:10.130184 #5224] ERROR -- web-app-1-centos7: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock run -d -p 22 --name web-app.node-1 -h web-app.node-1 152d01e167e9 /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid ----
+STDOUT: 
+STDERR: time="2016-05-22T09:34:10-05:00" level=fatal msg="Error response from daemon: Conflict. The name \"web-app.node-1\" is already in use by container a1976c5e53bb. You have to delete (or rename) that container to be able to reuse that name."
+---- End output of docker -H unix:///var/run/docker.sock run -d -p 22 --name web-app.node-1 -h web-app.node-1 152d01e167e9 /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid ----
+Ran docker -H unix:///var/run/docker.sock run -d -p 22 --name web-app.node-1 -h web-app.node-1 152d01e167e9 /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid returned 1
+E, [2016-05-22T09:34:10.130239 #5224] ERROR -- web-app-1-centos7: ------Backtrace-------
+E, [2016-05-22T09:34:10.130282 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/shell_out.rb:70:in `rescue in run_command'
+E, [2016-05-22T09:34:10.130322 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2016-05-22T09:34:10.130357 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/driver/base.rb:158:in `run_command'
+E, [2016-05-22T09:34:10.130391 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/kitchen-docker-2.1.0/lib/kitchen/driver/docker.rb:126:in `docker_command'
+E, [2016-05-22T09:34:10.130425 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/kitchen-docker-2.1.0/lib/kitchen/driver/docker.rb:253:in `run_container'
+E, [2016-05-22T09:34:10.130458 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/kitchen-docker-2.1.0/lib/kitchen/driver/docker.rb:95:in `create'
+E, [2016-05-22T09:34:10.130492 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `public_send'
+E, [2016-05-22T09:34:10.130544 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `block in perform_action'
+E, [2016-05-22T09:34:10.130609 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `call'
+E, [2016-05-22T09:34:10.130744 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:308:in `synchronize_or_call'
+E, [2016-05-22T09:34:10.130786 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:283:in `block in action'
+E, [2016-05-22T09:34:10.130821 #5224] ERROR -- web-app-1-centos7: /usr/local/rvm/rubies/ruby-2.1.6/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2016-05-22T09:34:10.130856 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:282:in `action'
+E, [2016-05-22T09:34:10.130891 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:273:in `perform_action'
+E, [2016-05-22T09:34:10.130925 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:252:in `create_action'
+E, [2016-05-22T09:34:10.130960 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:246:in `block in transition_to'
+E, [2016-05-22T09:34:10.130994 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `each'
+E, [2016-05-22T09:34:10.131029 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:245:in `transition_to'
+E, [2016-05-22T09:34:10.131063 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/instance.rb:108:in `create'
+E, [2016-05-22T09:34:10.131098 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `public_send'
+E, [2016-05-22T09:34:10.131132 #5224] ERROR -- web-app-1-centos7: /media/ibm/project/chef-repo/cookbooks/web-app/vendor/bundle/ruby/2.1.0/gems/test-kitchen-1.2.1/lib/kitchen/command.rb:109:in `block (2 levels) in run_action'
+E, [2016-05-22T09:34:10.131167 #5224] ERROR -- web-app-1-centos7: ----------------------
+I, [2016-05-22T09:34:46.481089 #5291]  INFO -- web-app-1-centos7: -----> Creating <web-app-1-centos7>...
+I, [2016-05-22T09:34:51.806804 #5291]  INFO -- web-app-1-centos7: 09b2f680f45d6125a2da4a35476eb9ac85c9d11d3969760b81ff0d5a15d09717
+I, [2016-05-22T09:34:51.979952 #5291]  INFO -- web-app-1-centos7: Usage of loopback devices is strongly discouraged for production use. Either use `--storage-opt dm.thinpooldev` or use `--storage-opt dm.no_warn_on_loop_devices=true` to suppress this warning.
+I, [2016-05-22T09:34:52.007435 #5291]  INFO -- web-app-1-centos7: 0.0.0.0:32805
+I, [2016-05-22T09:34:52.030110 #5291]  INFO -- web-app-1-centos7: Finished creating <web-app-1-centos7> (0m5.55s).
+I, [2016-05-22T09:35:03.014329 #5369]  INFO -- web-app-1-centos7: -----> Converging <web-app-1-centos7>...
+I, [2016-05-22T09:35:03.015112 #5369]  INFO -- web-app-1-centos7: Preparing files for transfer
+I, [2016-05-22T09:35:03.015478 #5369]  INFO -- web-app-1-centos7: Resolving cookbook dependencies with Berkshelf 4.2.0...
+I, [2016-05-22T09:35:21.329327 #5369]  INFO -- web-app-1-centos7: Removing non-cookbook files before transfer
+I, [2016-05-22T09:35:22.084220 #5369]  INFO -- web-app-1-centos7: Transfering files to <web-app-1-centos7>
+I, [2016-05-22T09:35:40.908597 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:40+00:00] INFO: Forking chef instance to converge...
+I, [2016-05-22T09:35:40.988121 #5369]  INFO -- web-app-1-centos7: Starting Chef Client, version 12.0.3[0m
+I, [2016-05-22T09:35:40.988201 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:40+00:00] INFO: *** Chef 12.0.3 ***
+I, [2016-05-22T09:35:40.988253 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:40+00:00] INFO: Chef-client pid: 64
+I, [2016-05-22T09:35:41.411207 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] WARN: unable to detect ipaddress
+I, [2016-05-22T09:35:41.411333 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] WARN: unable to detect macaddress
+I, [2016-05-22T09:35:41.958333 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] INFO: Setting the run_list to ["recipe[web-app]"] from CLI options
+I, [2016-05-22T09:35:41.967021 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] INFO: Run List is [recipe[web-app]]
+I, [2016-05-22T09:35:41.967088 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] INFO: Run List expands to [web-app]
+I, [2016-05-22T09:35:41.967135 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] INFO: Starting Chef Run for web-app-1-centos7
+I, [2016-05-22T09:35:41.967177 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] INFO: Running start handlers
+I, [2016-05-22T09:35:41.967218 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:41+00:00] INFO: Start handlers complete.
+I, [2016-05-22T09:35:42.137435 #5369]  INFO -- web-app-1-centos7: Compiling Cookbooks...[0m
+I, [2016-05-22T09:35:42.282325 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:42+00:00] INFO: ChefHandler light-weight provider is already initialized -- Skipping loading /tmp/kitchen/cookbooks/chef_handler/providers/default.rb!
+I, [2016-05-22T09:35:42.318347 #5369]  INFO -- web-app-1-centos7: Converging 5 resources[0m
+I, [2016-05-22T09:35:42.318475 #5369]  INFO -- web-app-1-centos7: Recipe: web-app::default[0m
+I, [2016-05-22T09:35:42.318520 #5369]  INFO -- web-app-1-centos7:   * directory[/opt/web-app] action create[2016-05-22T14:35:42+00:00] INFO: Processing directory[/opt/web-app] action create (web-app::default line 14)
+I, [2016-05-22T09:35:42.321601 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:42+00:00] INFO: directory[/opt/web-app] created directory /opt/web-app
+I, [2016-05-22T09:35:42.321692 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:42.321740 #5369]  INFO -- web-app-1-centos7:     [32m- create new directory /opt/web-app[0m[2016-05-22T14:35:42+00:00] INFO: directory[/opt/web-app] mode changed to 755
+I, [2016-05-22T09:35:42.321782 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:42.321820 #5369]  INFO -- web-app-1-centos7:     [32m- change mode from '' to '0755'[0m
+I, [2016-05-22T09:35:42.321859 #5369]  INFO -- web-app-1-centos7: [0m  * gem_package[sinatra] action install[2016-05-22T14:35:42+00:00] INFO: Processing gem_package[sinatra] action install (web-app::default line 21)
+I, [2016-05-22T09:35:46.102305 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:46.102440 #5369]  INFO -- web-app-1-centos7:     [32m- install version 1.4.7 of package sinatra[0m
+I, [2016-05-22T09:35:46.102490 #5369]  INFO -- web-app-1-centos7: [0m  * gem_package[puma] action install[2016-05-22T14:35:46+00:00] INFO: Processing gem_package[puma] action install (web-app::default line 21)
+I, [2016-05-22T09:35:49.650363 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:49.650479 #5369]  INFO -- web-app-1-centos7:     [32m- install version 3.4.0 of package puma[0m
+I, [2016-05-22T09:35:49.650550 #5369]  INFO -- web-app-1-centos7: [0m  * cookbook_file[/opt/web-app/app.rb] action create_if_missing[2016-05-22T14:35:49+00:00] INFO: Processing cookbook_file[/opt/web-app/app.rb] action create_if_missing (web-app::default line 27)
+I, [2016-05-22T09:35:49.655173 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:49+00:00] INFO: cookbook_file[/opt/web-app/app.rb] created file /opt/web-app/app.rb
+I, [2016-05-22T09:35:49.655240 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:49.655284 #5369]  INFO -- web-app-1-centos7:     [32m- create new file /opt/web-app/app.rb[0m[2016-05-22T14:35:49+00:00] INFO: cookbook_file[/opt/web-app/app.rb] updated file contents /opt/web-app/app.rb
+I, [2016-05-22T09:35:49.655324 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:49.655400 #5369]  INFO -- web-app-1-centos7:     [32m- update content in file /opt/web-app/app.rb from none to 87671a[0m
+I, [2016-05-22T09:35:49.655444 #5369]  INFO -- web-app-1-centos7:     [37m--- /opt/web-app/app.rb	2016-05-22 14:35:49.649624505 +0000[0m
+I, [2016-05-22T09:35:49.655484 #5369]  INFO -- web-app-1-centos7:     [37m+++ /opt/web-app/.app.rb20160522-64-xnsots	2016-05-22 14:35:49.649624505 +0000[0m
+I, [2016-05-22T09:35:49.655523 #5369]  INFO -- web-app-1-centos7:     [37m@@ -1 +1,7 @@[0m
+I, [2016-05-22T09:35:49.655561 #5369]  INFO -- web-app-1-centos7:     [37m+require 'sinatra'[0m
+I, [2016-05-22T09:35:49.655599 #5369]  INFO -- web-app-1-centos7:     [37m+configure { set :server, :puma }[0m
+I, [2016-05-22T09:35:49.655637 #5369]  INFO -- web-app-1-centos7:     [37m+[0m
+I, [2016-05-22T09:35:49.655714 #5369]  INFO -- web-app-1-centos7:     [37m+get '/' do[0m
+I, [2016-05-22T09:35:49.655753 #5369]  INFO -- web-app-1-centos7:     [37m+  "Hello World!"[0m
+I, [2016-05-22T09:35:49.655792 #5369]  INFO -- web-app-1-centos7:     [37m+end[0m[2016-05-22T14:35:49+00:00] INFO: cookbook_file[/opt/web-app/app.rb] mode changed to 755
+I, [2016-05-22T09:35:49.655832 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:49.655870 #5369]  INFO -- web-app-1-centos7:     [32m- change mode from '' to '0755'[0m
+I, [2016-05-22T09:35:49.655910 #5369]  INFO -- web-app-1-centos7: [0m  * execute[run app] action run[2016-05-22T14:35:49+00:00] INFO: Processing execute[run app] action run (web-app::default line 33)
+I, [2016-05-22T09:35:49.679030 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:49+00:00] INFO: execute[run app] ran successfully
+I, [2016-05-22T09:35:49.679138 #5369]  INFO -- web-app-1-centos7: 
+I, [2016-05-22T09:35:49.679182 #5369]  INFO -- web-app-1-centos7:     [32m- execute /opt/chef/embedded/bin/ruby /opt/web-app/app.rb > /opt/web-app/web_app.log 2>&1 &[0m
+I, [2016-05-22T09:35:49.679224 #5369]  INFO -- web-app-1-centos7: [0m[2016-05-22T14:35:49+00:00] INFO: Chef Run complete in 7.714480944 seconds
+I, [2016-05-22T09:35:49.679305 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:49+00:00] INFO: Skipping removal of unused files from the cache
+I, [2016-05-22T09:35:49.679350 #5369]  INFO -- web-app-1-centos7: [0m
+I, [2016-05-22T09:35:49.679388 #5369]  INFO -- web-app-1-centos7: Running handlers:[0m
+I, [2016-05-22T09:35:49.679426 #5369]  INFO -- web-app-1-centos7: [2016-05-22T14:35:49+00:00] INFO: Running report handlers
+I, [2016-05-22T09:35:49.679465 #5369]  INFO -- web-app-1-centos7: Running handlers complete
+I, [2016-05-22T09:35:49.679502 #5369]  INFO -- web-app-1-centos7: [0m[2016-05-22T14:35:49+00:00] INFO: Report handlers complete
+I, [2016-05-22T09:35:49.679541 #5369]  INFO -- web-app-1-centos7: Chef Client finished, 5/5 resources updated in 8.765475113 seconds[0m
+I, [2016-05-22T09:35:50.120864 #5369]  INFO -- web-app-1-centos7: Finished converging <web-app-1-centos7> (0m47.10s).
