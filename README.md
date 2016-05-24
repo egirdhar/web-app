@@ -21,30 +21,42 @@ web app cookbook using ruby app server ( sinatra and puma ) and nginx service as
  please make sure that docker demon is running on host machine. 
  
   if not, install it using 
+```
  #curl -sSL https://get.docker.com/ | sh
- 
+ #usermod -aG docker root
+ #service docker start
+
+``` 
  install bundle
+```
  # gem install bundle
- 
+```` 
  run bundle to install required gems
+```
  #cd we-app 
  #bundle install --path=vendor/bundle
-
+```
  run the container app-node1
+```
  #bundle exec kitchen create  app-node1-ubuntu
  #bundle exec kitchen converge app-node1-ubuntu
+```
+
  
  run container app-node2
+```
  #bundle exec kitchen create  app-node2-ubuntu
  #bundle exec kitchen converge app-node2-ubuntu
-
+```
  run  LB
+```
  #bundle exec kitchen create  loadbalancer-ubuntu
  #bundle exec kitchen converge loadbalancer-ubuntu
- 
+ ```
  access the LB 
+```
  #curl -i http://localhost:80
-
+```
 
 
  

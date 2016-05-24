@@ -30,12 +30,12 @@ suites:
     run_list:
       - recipe[web-app] 
 
-  - name: app-node3
-    driver_config:
-     hostname: app-node3
-     instance_name: app-node3
-    run_list:
-      - recipe[web-app]  
+#  - name: app-node3
+#    driver_config:
+#     hostname: app-node3
+#     instance_name: app-node3
+#    run_list:
+#      - recipe[web-app]  
 
   - name: loadbalancer
     driver_config:
@@ -46,11 +46,12 @@ suites:
      links:
         - app-node1:app-node1
         - app-node2:app-node2
-        - app-node3:app-node3
+ #       - app-node3:app-node3
     run_list:
       - recipe[web-app::server]
     attributes:
         backend:
-          server: ['app-node1','app-node2','app-node3']
+    #      server: ['app-node1','app-node2','app-node3']
+          server: ['app-node1','app-node2']
 
 
