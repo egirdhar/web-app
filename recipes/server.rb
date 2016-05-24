@@ -1,24 +1,31 @@
+#
+# Cookbook Name:: web-app
+# Recipe:: default
+#
+# Copyright (C) 2016 YOUR_NAME
+#
+# All rights reserved - Do Not Redistribute
 
-include_recipe 'nginx::default'
-
-node.set["nginx"]["default_site_enabled"] = false
-
-
-template '/etc/init.d/nginx' do
-   source "nginx-init.erb"
-   mode   "0644"
+#
+#
+# assuming the ubuntu platform and install nginx service
+package 'nginx' do
+  action :install
 end
 
+# custom nginx config
+template '/etc/nginx/sites-available/app' do 
+source 'nginx-app.erb'
+mode '0755'
+end 
+#
+# create link
+link '/etc/nginx/sites-enabled/app' do 
+ to '/etc/nginx/sites-available/app'
+end 
 
-nginx_site "default" do
-  enable false
+# enable and start
+service 'nginx' do
+  action [ :enable, :start ]
 end
 
-#nginx_site "wordpress" do
-#  enable true
-#end
-
-service "nginx" do
-  supports :status => true, :restart => true, :reload => true
-  action [ :reload ]
-end

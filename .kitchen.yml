@@ -7,37 +7,50 @@ provisioner:
   name: chef_solo
 
 platforms: 
-  - name: centos7 
+  - name: ubuntu 
     driver_config: 
       dockerfile: test/Dockerfile
       provision_command:
       - echo 'root:P@ssw0rd' | chpasswd
       - mkdir /root/.ssh
 
+
 suites:
-  - name: loadbalancer
-    driver_config:
-     hostname: nginx-lb
-     instance_name: nginx-lb
-     forward:
-          - 8080:80
-     links:
-        - web-app.node-1:web-app.node-1
-        - web-app.node-2:web-app.node-2
-    run_list:
-      - recipe[web-app::server]
-  - name: web-app-1
-    driver_config:
-     hostname: web-app.node-1
-     instance_name: web-app.node-1
-    run_list:
-      - recipe[web-app]
-  - name: web-app-2
-    driver_config:
-     hostname: web-app.node-2
-     instance_name: web-app.node-2
+  - name: app-node1
+    driver_config:  
+     hostname: app-node1
+     instance_name: app-node1
     run_list:
       - recipe[web-app]
 
+  - name: app-node2
+    driver_config:
+     hostname: app-node2
+     instance_name: app-node2
+    run_list:
+      - recipe[web-app] 
+
+  - name: app-node3
+    driver_config:
+     hostname: app-node3
+     instance_name: app-node3
+    run_list:
+      - recipe[web-app]  
+
+  - name: loadbalancer
+    driver_config:
+     hostname: loadbalancer
+     instance_name: loadbalancer
+     forward:
+          - 80:8080
+     links:
+        - app-node1:app-node1
+        - app-node2:app-node2
+        - app-node3:app-node3
+    run_list:
+      - recipe[web-app::server]
+    attributes:
+        backend:
+          server: ['app-node1','app-node2','app-node3']
 
 
