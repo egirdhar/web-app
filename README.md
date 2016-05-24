@@ -62,7 +62,7 @@ web app cookbook using ruby app server ( sinatra and puma ) and nginx service as
 
 To remove all the nodes and start over again 
 
- run  LB
+ run kitchen destroy commands
 ```
  #bundle exec kitchen destroy  app-node1-ubuntu
  #bundle exec kitchen destroy  app-node2-ubuntu
