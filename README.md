@@ -58,6 +58,18 @@ web app cookbook using ruby app server ( sinatra and puma ) and nginx service as
  #curl -i http://localhost:80
 ```
 
+## Cleanup 
+
+To remove all the nodes and start over again 
+
+ run  LB
+```
+ #bundle exec kitchen destroy  app-node1-ubuntu
+ #bundle exec kitchen destroy  app-node2-ubuntu
+ #bundle exec kitchen destroy  loadbalancer-ubuntu
+
+ ```
+
 
  
 
