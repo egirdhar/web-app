@@ -2,7 +2,7 @@
 # Cookbook Name:: web-app
 # Recipe:: default
 #
-# Copyright (C) 2016 YOUR_NAME
+# Copyright (C) 2016 GIRDHAR KATIYAR
 #
 # All rights reserved - Do Not Redistribute
 
